@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Ирина Виногорская](https://up.htmlacademy.ru/adaptive-individual/1/user/1932085).
-* Наставник: `Неизвестно`.
+- Студент: [Ирина Виногорская](https://up.htmlacademy.ru/adaptive-individual/1/user/1932085).
+- Наставник: `Виктория Никитина`.
 
 ---
 
