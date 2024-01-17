@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт Энерджи - форма подбора продукта</title>
+  <link rel="stylesheet" href="./css/style.css">
   <!--<link rel="icon" href="favicon.ico">
 		<link rel="icon" type="image/x-icon" href="img/favicon.png" sizes="16x16">-->
 </head>
@@ -13,25 +14,24 @@
   <header class="header">
     <a href="#" class="header__logo">
       <img src="#" alt="Логотип Кэт энерджи." class="header__image" width="33" height="33">
-      <img src="#" alt="Кэт Энерджи." class="header__image-catenergy" width="101" height="18">
     </a>
+    <nav class="header nav">
+      <button class="nav__button">
+        <span class="visually-hidden">Открыть-закрыть меню.</span>
+      </button>
+      <ul class="nav__list nav-list">
+        <li class="nav-list__item">
+          <a href="#" class="nav-list__link">Главная</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="#" class="nav-list__link">Каталог продукции</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="#" class="nav-list__link">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </header>
-  <nav class="nav">
-    <button class="nav__button">
-      <span class="visually-hidden">Открыть-закрыть меню.</span>
-    </button>
-    <ul class="nav__list nav-list">
-      <li class="nav-list__item">
-        <a href="#" class="nav-list__link">Главная</a>
-      </li>
-      <li class="nav-list__item">
-        <a href="#" class="nav-list__link">Каталог продукции</a>
-      </li>
-      <li class="nav-list__item">
-        <a href="#" class="nav-list__link">Подбор программы</a>
-      </li>
-    </ul>
-  </nav>
   <main class="form">
     <h2 class="form-title">Подбор программы</h2>
     <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
@@ -57,15 +57,15 @@
         <legend class="visually-hidden">Цель покупки продукта</legend>
         <ul class="form__target-list">
           <li class="form__target-item">
-            <input class="visually-hidden" type="radio" name="weight-loss" id="weightloss" value="loss" checked>
+            <input class="visually-hidden" type="radio" name="weight" id="weightloss" value="loss" checked>
             <label for="weightloss" class="form__target-weight-loss">похудение</label>
           </li>
           <li class="form__target-item">
-            <input class="visually-hidden" type="radio" name="weight-gain" id="weightgain" value="gain">
+            <input class="visually-hidden" type="radio" name="weight" id="weightgain" value="gain">
             <label for="weightgain" class="form__target-weight-gain">набор массы</label>
           </li>
           <li class="form__target-item">
-            <input class="visually-hidden" type="radio" name="need-advice" id="needadvice" value="advice">
+            <input class="visually-hidden" type="radio" name="weight" id="needadvice" value="advice">
             <label for="needadvice" class="form__target-advice">не знаю (нужен ваш совет)</label>
           </li>
         </ul>
