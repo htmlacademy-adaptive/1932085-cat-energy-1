@@ -1,16 +1,9 @@
-.main-page__hero {
-  background-color: @basic-color4-opacity;
-  height: 302px;
-  background-image: url("../../img/index-background-desktop2.jpg"), url("../../img/index-can-mobile1.png");
-  background-size: cover;
-    background-position: center;
-
-  height: 100vh;
+.hero {
+  height: 100%;
   max-width: 100%;
-  object-fit: cover;
   padding: 27px 35px 20px 35px;
 }
-.hero-title {
+.hero__title {
   color: @title-light;
   text-align: center;
   text-wrap: wrap;
@@ -21,9 +14,8 @@
   line-height: 36px;
   margin: 0;
   margin-bottom: 20px;
-
 }
-.hero-derscriptor {
+.hero__derscriptor {
   text-align: center;
   color: @title-light;
   font-family: "Oswald", sans-serif;
@@ -33,10 +25,19 @@
   line-height: 14px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 29px;
-
+  margin-bottom: 164px;
 }
-.hero-button {
+
+.hero__background-cat-wrapper::after {
+  background-image: url("../img/index-background-desktop2-green.jpg");
+height: 100%;
+content: "";
+}
+.hero__background-can-wrapper::after {
+background-image: url("../img/index-can-mobile1.png");
+content: "";
+}
+.hero__button {
   display: block;
   color: @title-light;
   text-align: center;
