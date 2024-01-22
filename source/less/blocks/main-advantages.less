@@ -1,18 +1,60 @@
 .main-advantages {
   width: calc(100%-40px);
+  margin: 0 20px 49px 20px;
 }
 .main-advantages__title {
   color: @title-dark;
-  text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 .main-advantages__list {
-
   .list-reset();
-
+  }
+.main-advantages__item {
+  position: relative;
+ padding-left: 80px;
+}
+.main-advantages__item:not(:last-child) {
+  margin-bottom: 26px;
+}
+.main-advantages__item--use::before {
+  position: absolute;
+  top: -3px;
+    left: 0px;
+  content: "";
+  background-image: url("../img/leaf.png");
+  width: 60px;
+  height: 60px;
+}
+.main-advantages__item--powder::before {
+  position: absolute;
+  top: -3px;
+    left: 0px;
+  content: "";
+  background-image: url("../img/powder.png");
+  width: 60px;
+  height: 60px;
+}
+.main-advantages__item--food::before {
+  position: absolute;
+  top: -3px;
+    left: 0px;
+  content: "";
+  background-image: url("../img/cuttlery.png");
+  width: 60px;
+  height: 60px;
+}
+.main-advantages__item--change::before {
+  position: absolute;
+  top: -3px;
+    left: 0px;
+  content: "";
+  background-image: url("../img/clock.png");
+  width: 60px;
+  height: 60px;
 }

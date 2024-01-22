@@ -1,7 +1,6 @@
 .hero {
   height: 100%;
   max-width: 100%;
-  padding: 27px 35px 20px 35px;
 }
 .hero__title {
   color: @title-light;
@@ -12,9 +11,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 auto 25px;
+  width: 300px;
 }
+
 .hero__derscriptor {
   text-align: center;
   color: @title-light;
@@ -25,17 +25,31 @@
   line-height: 14px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 164px;
 }
 
-.hero__background-cat-wrapper::after {
-  background-image: url("../img/index-background-desktop2-green.jpg");
-height: 100%;
-content: "";
+.hero__background-cat-wrapper {
+  position: relative;
+  background: url("../img/index-background-desktop2-green.jpg") no-repeat center top;
+  background-size: auto 100%;
+  background-color: #62a53b;
+  padding: 27px 0 148px 0;
+  min-height: 302px;
+  box-sizing: border-box;
+}
+
+.hero__background-can-wrapper {
+  position: relative;
+    padding-bottom: 135px;
 }
 .hero__background-can-wrapper::after {
-background-image: url("../img/index-can-mobile1.png");
-content: "";
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-image: url("../img/index-can-mobile1.png");
+  width: 280px;
+  height: 270px;
 }
 .hero__button {
   display: block;
@@ -49,6 +63,6 @@ content: "";
   text-transform: uppercase;
   .links-decor();
   background-color: @basic-color4;
-  margin: 0;
+  margin: 0 20px 20px;
   padding: 10px 20px;
 }
