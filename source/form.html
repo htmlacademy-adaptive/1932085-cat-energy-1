@@ -12,50 +12,51 @@
 <body>
   <h1 class="visually-hidden">Кэт энерджи - форма подбора продукта.</h1>
   <header class="header">
-    <a href="#" class="header__logo">
-      <img src="#" alt="Логотип Кэт энерджи." class="header__image" width="33" height="33">
+    <a class="header__logo" href="index.html">
+      <img src="./img/logo-mobile.svg" alt="Логотип Кэт энерджи." class="header__image" width="33" height="38">
     </a>
-    <nav class="header nav">
+    <nav class="header__nav nav">
       <button class="nav__button">
         <span class="visually-hidden">Открыть-закрыть меню.</span>
       </button>
       <ul class="nav__list nav-list">
         <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Главная</a>
+          <a href="index.html" class="nav-list__link">Главная</a>
         </li>
         <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Каталог продукции</a>
+          <a href="catalog.html" class="nav-list__link">Каталог продукции</a>
         </li>
         <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Подбор программы</a>
+          <a href="form.html" class="nav-list__link">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
-  <main class="form">
-    <h2 class="form-title">Подбор программы</h2>
-    <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-    <form class="form__filter" action="https://echo.htmlacademy.ru/" method="get">
-      <fieldset class="form__pet-details">
+  <main class="form-page">
+    <h2 class="form-page__title inner-title">Подбор программы</h2>
+    <p class="form-page__description inner-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <form class="form-page__filter form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="form__group pet-details">
         <legend class="visually-hidden">Данные питомца</legend>
-        <ul class="form__pet-list">
-          <li class="form__pet-item">
-            <label for="petname" class="form__pet-name">ИМЯ:*</label>
-            <input class="form__pet-name-input" type="text" id="petname" placeholder="Барсик" required name="Pet-name">
+        <ul class="form__list pet-details__list">
+          <li class="pet-details__item text-input">
+            <label for="petname" class="text-input__label">ИМЯ:*</label>
+            <input class="text-input__input" type="text" id="petname" placeholder="Барсик" value="Барсик" required
+              name="Pet-name">
           </li>
-          <li class="form__pet-item">
-            <label for="petweight" class="form__pet-weight">Вес (кг):*</label>
-            <input class="form__pet-weight-input" type="number" id="petweight" placeholder="7" required
+          <li class="pet-details__item text-input">
+            <label for="petweight" class="text-input__label">Вес (кг):*</label>
+            <input class="text-input__input" type="number" id="petweight" placeholder="7" value="7" required
               name="Pet-weight">
           </li>
-          <li class="form__pet-item">
-            <label for="petage" class="form__pet-age">Возраст (лет):</label>
-            <input class="form__pet-age-input" type="number" id="petage" placeholder="7" required name="Pet-age">
+          <li class="form__pet-item text-input">
+            <label for="petage" class="text-input__label">Возраст (лет):</label>
+            <input class=text-input__input" type="number" id="petage" placeholder="7" value="7" required name="Pet-age">
           </li>
       </fieldset>
-      <fieldset class="form__target">
+      <fieldset class="form__group form__target">
         <legend class="visually-hidden">Цель покупки продукта</legend>
-        <ul class="form__target-list">
+        <ul class="form__list form__target-list">
           <li class="form__target-item">
             <input class="visually-hidden" type="radio" name="weight" id="weightloss" value="loss" checked>
             <label for="weightloss" class="form__target-weight-loss">похудение</label>
@@ -70,9 +71,9 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__contacts">
+      <fieldset class="form__group form__contacts">
         <legend class="form__contacts-legend">Контактные данные (владельца кота)</legend>
-        <ul class="form__contacts-list">
+        <ul class="form__list form__contacts-list">
           <li class="form__contacts-item">
             <label for="email">E-mail:*</label>
             <input class="form__contacts-input" type="email" name="mail" placeholder="kuklachev@gmail.com" id="email"
@@ -85,14 +86,14 @@
           </li>
         </ul>
       </fieldset>
-      <div class="form__comments">
+      <fieldset class="form__group form__comments">
         <label for="message">Комментарий</label>
         <textarea class="form__comments-text" name="comment" placeholder="Расскажите обо всех повадках кота"
           id="message"></textarea>
-      </div>
-      <fieldset class="form__addition">
+      </fieldset>
+      <fieldset class="form__group form__addition">
         <legend class="form__addition-legend">Дополнительно</legend>
-        <ul class="form__addiition-list">
+        <ul class="form__list form__addiition-list">
           <li class="form__addiition-item">
             <input type="checkbox" name="sugar" id="sugar-substitute" checked>
             <label for="sugar-substitute">сахарозаменитель</label>

@@ -1,21 +1,28 @@
 .footer-collaboration {
-  display: grid;
-  grid-template-columns: 140px 140px;
+  display: flex;
+  margin: 0;
+  padding: 26px 20px;
 }
 .footer-collaboration__invitation {
-  color: #111111;
-  font-family: "Oswald", sans-serif;
+  flex-grow: 1;
+  color: @title-dark;
+  font-family: @oswald;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  margin: 0;
+  min-width: 140px;
 }
 .footer-collaboration__address {
+  flex-grow: 1;
   color: @text-color;
-  font-family: "Lato", sans-serif;
+  font-family: @lato;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  margin: 0;
+  min-width: 140px;
 }
