@@ -1,9 +1,20 @@
 .pet-details {
-  border-bottom: 1px solid red;
-  padding-bottom: 23px;
+  border-bottom: 1px solid @line-color;
+  padding-bottom: 25px;
+
+  @media(min-width: @tablet-width) {
+    border: none;
+
+  }
 }
 .pet-details__list {
   margin: 0 20px;
+
+  @media(min-width: @tablet-width) {
+    margin: 0;
+
+  }
+
 }
 .pet-details__item:not(:last-child) {
   margin-bottom: 14px;

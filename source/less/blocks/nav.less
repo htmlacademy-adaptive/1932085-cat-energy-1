@@ -7,9 +7,32 @@
   top: -44px;
   background-color: @basic-color1;
   background-image: url("../../img/button-cross.svg");
+  background-position: 0 0;
   background-repeat: no-repeat;
   padding: 0;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   border: none;
+  display: none;
+}
+.nav--closed button {
+  background-image: url("../img/button-burger.svg");
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.nav--closed .nav__list {
+  display: none;
+}
+.nav--opened .nav__list {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: @basic-color1;
+  width: 100%;
+}
+.nav--opened .nav__button {
+  display: block;
 }
