@@ -20,9 +20,12 @@
   display: block;
   width: 24px;
   height: 24px;
+  .tablet({display: none;});
 }
 .nav--closed .nav__list {
   display: none;
+  .tablet({display: flex;
+  gap: 33px;});
 }
 .nav--opened .nav__list {
   display: block;
@@ -35,4 +38,6 @@
 }
 .nav--opened .nav__button {
   display: block;
+
+  .tablet({display: none;});
 }

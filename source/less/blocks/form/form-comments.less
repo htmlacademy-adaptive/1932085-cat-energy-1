@@ -1,10 +1,31 @@
 .form-comments {
   display: flex;
   flex-wrap: wrap;
+  border-top: solid 2px @basic-color4;
 }
 .form-comments__title {
+  position: relative;
   margin-bottom: 38px;
+
+  .tablet({
+    display: block;
+  });
 }
+.form-comments__title::before {
+  .tablet
+    ({
+    position: absolute;
+    content: "";
+    left:-72px;
+    top: 21px;
+
+    height: 2px;
+    width: 100%;
+    background-color: @basic-color4;
+
+  });;
+}
+
 .form-comments__text {
   display: block;
   margin: 0 20px 22px 20px;
@@ -14,8 +35,9 @@
   resize: none;
   border: 1px solid #e7e7e7;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     margin: 0;
+    margin-bottom: 65px;
     border: 1px solid #e7e7e7;
   }
 }

@@ -1,6 +1,9 @@
 .main-advantages {
   width: calc(100%-40px);
   margin: 0 20px 49px 20px;
+
+  .tablet ({margin: 0 30px 47px 30px;
+  });;
 }
 .main-advantages__title {
   color: @title-dark;
@@ -10,52 +13,125 @@
   font-weight: 400;
   line-height: 40px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
+
+  .tablet({
+    font-size: 60px;
+    line-height: 60px;
+  });
 }
 .main-advantages__list {
   .list-reset();
+
+  .tablet({
+    display: grid;
+    grid-template-columns: 265px 265px;
+    row-gap: 48px;
+    column-gap: 120px;
+  });
 }
 .main-advantages__item {
   position: relative;
   padding-left: 80px;
   min-height: 60px;
+
+  .tablet({
+    padding: 139px 20px 57px 0;
+    min-height: 72px;
+    margin-bottom: 0;
+  });
 }
 .main-advantages__item:not(:last-child) {
   margin-bottom: 20px;
+
+  .tablet({margin-bottom: 0;});
 }
 .main-advantages__item--use::before {
   position: absolute;
   top: -3px;
-  left: 0px;
+  left: 0;
   content: "";
   background-image: url("../img/leaf.png");
   width: 60px;
   height: 60px;
+
+  .tablet({
+    top: 28px;
+     background-image: url("../img/leaf-tablet.png");
+    width: 80px;
+    height: 80px;});
 }
 .main-advantages__item--powder::before {
   position: absolute;
   top: -3px;
-  left: 0px;
+  left: 0;
   content: "";
   background-image: url("../img/powder.png");
   width: 60px;
   height: 60px;
+
+  .tablet({
+    top: 28px;
+    background-image: url("../img/powder-tablet.png");
+    width: 80px;
+    height: 80px;});
 }
 .main-advantages__item--food::before {
   position: absolute;
   top: -3px;
-  left: 0px;
+  left: 0;
   content: "";
   background-image: url("../img/cuttlery.png");
   width: 60px;
   height: 60px;
+
+  .tablet({
+    top: 28px;
+    background-image: url("../img/cuttlery-tablet.png");
+    width: 80px;
+    height: 80px;});
 }
 .main-advantages__item--change::before {
   position: absolute;
   top: -3px;
-  left: 0px;
+  left: 0;
   content: "";
   background-image: url("../img/clock.png");
   width: 60px;
   height: 60px;
+
+  .tablet({
+    top: 28px;
+    background-image: url("../img/clock-tablet.png");
+    width: 80px;
+    height: 80px;});
+}
+
+.main-advantages__item--use {
+  .tablet({
+    background-image: url("../../img/1-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 65% 65%;
+  });
+}
+.main-advantages__item--powder {
+  .tablet({
+    background-image: url("../../img/2-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 80% 65%;
+  });
+}
+.main-advantages__item--food {
+  .tablet({
+    background-image: url("../../img/3-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 81% 74%;
+  });
+}
+.main-advantages__item--change {
+  .tablet({
+    background-image: url("../../img/4-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 85% 68%;
+  });
 }

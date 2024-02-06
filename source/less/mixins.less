@@ -6,4 +6,13 @@
 .links-decor() {
   text-decoration: none;
 }
+.responsive(@minWidth; @rules) {
+  @media (min-width: @minWidth) {@rules();}
+}
+.tablet(@rules) {
+  .responsive(@tablet-width, {@rules();})
+}
+.desktop(@rules) {
+  .responsive(@desktop-width, {@rules();})
+}
 

@@ -1,6 +1,7 @@
 .hero {
   height: 100%;
   max-width: 100%;
+  .tablet({position: relative;});
 }
 .hero__title {
   color: @title-light;
@@ -13,17 +14,29 @@
   line-height: 36px;
   margin: 0 auto 25px;
   width: 300px;
+
+  .tablet({
+    font-size: 60px;
+    line-height: 60px;
+    color: @title-dark;
+    width: 450px;
+    margin: 60px auto 40px 120px;
+    text-align: start;});
 }
 .hero__derscriptor {
   text-align: center;
   color: @title-light;
   font-family: @oswald;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 14px;
   text-transform: uppercase;
   margin: 0;
+  .tablet({color: @title-dark;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    margin-left: 120px;});
 }
 .hero__background-cat-wrapper {
   position: relative;
@@ -34,10 +47,15 @@
   padding: 27px 0 148px 0;
   min-height: 302px;
   box-sizing: border-box;
+  .tablet({background: none; padding: 0;});
 }
 .hero__background-can-wrapper {
   position: relative;
   padding-bottom: 140px;
+
+  .tablet({
+    margin-bottom: 369px;
+  });
 }
 .hero__background-can-wrapper::after {
   position: absolute;
@@ -48,9 +66,21 @@
   background-image: url("../img/index-can-mobile1.png");
   width: 280px;
   height: 270px;
+
+  .tablet(
+    {background-image: url("../img/index-can-tablet1.png");
+z-index: -10;
+      width: 709px;
+    height: 609px;
+    bottom: -369px;
+    });
 }
 .hero__button {
   .links-decor();
   margin-bottom: 20px;
-
+  .tablet({position: absolute;
+  top: 231px;
+  left: 100px;
+  margin-left: 21px;
+ });
 }

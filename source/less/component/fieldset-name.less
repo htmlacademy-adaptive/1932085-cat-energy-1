@@ -1,34 +1,27 @@
 .fieldset-name {
-  position: relative;
   display: flex;
-  width: 100%;
-  padding: 0;
-  margin-left: 20px;
-  gap: 24px;
-
-
-}
-.fieldset-name__name {
   color: @title-dark;
   font-family: @oswald;
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
   text-wrap: nowrap;
+  padding-right: 20px;
+  padding-left: 20px;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    background-color: @basic-color1;
+    padding-right: 40px;
+    padding-left: 0;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
   }
 }
-.fieldset-name__decor {
-  position: relative;
-  top: 16px;
-  background-color: @basic-color4;
-  background-position-y: center;
-  height: 2px;
-  width: 100%;
+.fieldset-name br {
+  .tablet({
+  display: none;
+});
 }

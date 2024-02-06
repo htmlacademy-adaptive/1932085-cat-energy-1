@@ -1,86 +1,126 @@
 .weight-control {
   margin: 0 20px;
+
+  .tablet({margin: 0 30px;});
 }
 .weight-control__list {
   padding: 0;
-  margin: 0;
+  margin: 0 20px;
   .list-reset();
-  width: calc(100%-40px);
+
+  .tablet({ margin-bottom: 41px;})
 }
+
 .weight-control__item {
   background-color: @basic-color2;
-     padding: 30px 33px 20px 20px;
+  padding: 30px 33px 20px 20px;
   margin-bottom: 18px;
+
+  .tablet({
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 77px 0 57px 52px;
+  });
 }
 .weight-control__title {
   color: #000000;
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
   padding-left: 70px;
-margin: 0 0 29px 0;
+  margin: 0 0 29px 0;
+
+  .tablet({ font-size: 36px; line-height: 36px;
+  padding-left: 0; margin-bottom: 24px});
 }
+
 .weight-control__description {
   color: @text-color;
-  font-family: "Lato" sans-serif;
+  font-family: @lato;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   margin: 0;
- padding: 0 13px 23px 0;
+  padding: 0 13px 23px 0;
   min-width: 227px;
-  border-bottom: solid #D9D9D9 1px;
+  border-bottom: solid #d9d9d9 1px;
+
+  .tablet({font-size: 16px;
+    line-height: 24px;
+    max-width: 340px;
+    border: none;
+    margin-bottom: 61px;
+    padding: 0;
+  });
 }
 .weight-control__item--loss .weight-control__title,
 .weight-control__item--gain .weight-control__title {
-position: relative;
+  position: relative;
 }
 
 .weight-control__item--loss .weight-control__title::before {
   position: absolute;
   content: "";
-left: 0;
-top: -7px;
+  left: 0;
+  top: -7px;
   background-image: url("../img/cat-slim.png");
-width: 50px;
-height: 53px;
+  width: 50px;
+  height: 53px;
+
+  .tablet({
+    left: 392px;
+    top: 3px;
+    background-image: url("../img/cat-slim-tablet.png");
+    width: 200px;
+    height: 211px;
+    background-repeat: no-repeat;
+    });
 }
 .weight-control__item--gain .weight-control__title::before {
   position: absolute;
   content: "";
   left: -5px;
   top: -6px;
-background-image: url("../img/cat-pro.png");
-width: 67px;
-height: 50px;
+  background-image: url("../img/cat-pro.png");
+  width: 67px;
+  height: 50px;
+
+  .tablet({
+    left: 357px;
+    top: 16px;
+   background-image: url("../img/cat-pro-tablet.svg");
+    width: 268px;
+    height: 200px;
+    background-repeat: no-repeat;
+    });
 }
 
 .weight-control__link {
-
-position: relative;
-display: inline-block;
+  position: relative;
+  display: inline-block;
   color: @title-dark;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   .links-decor();
-
-
   margin-top: 20px;
+
+  .tablet({
+    font-size: 20px;
+    margin: 0;
+  });
 }
 .weight-control__link::after {
   position: absolute;
-  right: -50px;
+  right: -57px;
   content: "";
   background-image: url("../img/icon_arrow.svg");
   width: 32px;
-height: 10px;
-
+  height: 10px;
 }
