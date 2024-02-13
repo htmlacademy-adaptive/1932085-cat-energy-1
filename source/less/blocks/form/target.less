@@ -2,18 +2,24 @@
   border-bottom: 1px solid @line-color;
   padding-bottom: 11px;
 
-  @media(min-width: @tablet-width) {
-    padding: 23px 27px 23px 27px;
-        border: 1px solid #e7e7e7;
-
+  @media (min-width: @tablet-width) {
+    margin: 0 70px 55px 70px;
+    border-bottom: none;
   }
 }
 .target__list {
   margin: 28px 20px 0 20px;
-  @media(min-width: @tablet-width) {
+
+  .tablet({
+    padding: 28px 27px 19px 27px;
+    border: 1px solid #e7e7e7;
     margin: 0;
-  }
+  });
 }
 .target__item:not(:last-child) {
   margin-bottom: 13px;
+
+  .tablet({
+    margin-bottom: 12px;
+  });
 }

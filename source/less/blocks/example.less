@@ -4,18 +4,16 @@
   padding: 25px 20px 40px 20px;
 
   .tablet({
-
     background-color: @basic-color1;
     border-top: 2px solid  #e6e6e6;
-    padding: 45px 30px 0 30px;
+    padding: 0;
       });
 }
 
 .example picture {
   .tablet({ display: block;
     background-color: @basic-color3;
-height: 619px; //чтоб отодвинуть след поле
-
+    height: 619px; //чтоб отодвинуть след поле
   });
 }
 
@@ -30,20 +28,20 @@ height: 619px; //чтоб отодвинуть след поле
   .tablet({
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 60px;
-  });
+    margin: 45px 30px 60px 30px;
+    });
 }
 .example__text {
-  min-width: 300px;
+  min-width: 285px;
   margin: 0 0 20px 0;
 
   .tablet({
-    margin-bottom: 53px;
+    margin: 0 30px 53px 30px;
   });
 }
 .example__list {
   display: flex;
-  gap: 32px;
+  gap: 30px;
   min-width: 280px;
   justify-content: left;
   margin: 0;
@@ -101,6 +99,8 @@ height: 619px; //чтоб отодвинуть след поле
   margin: 0;
 
   .tablet({
+    margin: 0 auto;
+    max-width: 708px;
     width: 100%;
         justify-content: space-between;
         margin-bottom: 99px;

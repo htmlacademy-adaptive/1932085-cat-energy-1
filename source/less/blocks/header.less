@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  font-family: "Oswald", sans-serif;
+  font-family: @oswald;
   color: @title-dark;
   font-size: 20px;
   font-style: normal;
@@ -10,6 +10,7 @@
   background-color: @basic-color1;
   padding-top: 65px;
   background: url("../img/logo-catenergy.svg") no-repeat center 23px;
+  border-bottom: 2px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -18,15 +19,29 @@
     line-height: 24px;
     padding-top: 0;
     background: none;
-    margin: 25px 34px 0 30px;
+    margin: 16px 34px 0 30px;
     min-height: 50px;
+    min-width: 708px;
+    border: none;
   }
-  @media (min-width: @desktop-width) {
-  }
+
+  .desktop({
+    z-index: 20;
+    font-size: 20px;
+    margin: 51px 110px 0 110px;
+  });
 }
 .header__logo {
   position: absolute;
   top: 13px;
   left: 23px;
-  .tablet({position: static; margin-top: 10px;});
+
+  .tablet({
+    position: static;
+    margin-top: 10px;
+  });
+
+  .desktop({
+    margin-top: 4px;
+  });
 }

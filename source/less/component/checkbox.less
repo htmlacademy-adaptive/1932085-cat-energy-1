@@ -5,7 +5,7 @@
   height: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 130px;
+    padding-left: 59px;
     height: 40px;
   }
 
@@ -22,17 +22,17 @@
   background-color: @basic-color1;
   border: 1px solid #cdcdcd;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     left: -1px;
-  top: -8px;
+    top: -11px;
     width: 40px;
     height: 40px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     left: -1px;
     top: -8px;
-}
+  }
 }
 .checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
   position: absolute;
@@ -42,6 +42,11 @@
   width: 26px;
   height: 26px;
   background-color: transparent;
+
+  .tablet({
+    left: 6px;
+    top: 6px;
+  });
 }
 .checkbox__label {
   display: inline-block;
@@ -52,8 +57,7 @@
   line-height: 18px;
   text-transform: uppercase;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
-
   }
 }

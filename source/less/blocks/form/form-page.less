@@ -1,28 +1,15 @@
-.form-page {
-
-  @media(min-width: @tablet-width)  {
-
-    margin-left: 70px;
-
-  }
-  @media(min-width: @desktop-width) {
-    margin-left: 110px;
-}
-}
 .form-page__title {
   padding-top: 28px;
   margin-bottom: 37px;
 
-  @media(min-width: @tablet-width)  {
-    padding-top: 65px;
-    margin-bottom: 37px;
-
-  }
-  @media(min-width: @desktop-width) {
-
-
-  }
+  .tablet({
+    padding-top: 0;
+    margin: 60px 70px 54px 70px;});
 }
 .form-page__description {
   margin-bottom: 39px;
+
+  .tablet({
+    margin: 0 70px 66px 70px;
+  });
 }

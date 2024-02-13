@@ -9,35 +9,22 @@
 
   .tablet({
     display: block;
+    margin-bottom: 78px;
   });
-}
-.form-comments__title::before {
-  .tablet
-    ({
-    position: absolute;
-    content: "";
-    left:-72px;
-    top: 21px;
-
-    height: 2px;
-    width: 100%;
-    background-color: @basic-color4;
-
-  });;
 }
 
 .form-comments__text {
   display: block;
   margin: 0 20px 22px 20px;
   padding-top: 14px;
-  height: 135px;
+  min-height: 135px;
   outline: none;
   resize: none;
   border: 1px solid #e7e7e7;
 
-  @media (min-width: @tablet-width) {
-    margin: 0;
-    margin-bottom: 65px;
-    border: 1px solid #e7e7e7;
-  }
+  .tablet({
+      margin: 0 70px 65px 70px;
+      border: 1px solid #e7e7e7;
+      min-height: 158px;
+    });
 }

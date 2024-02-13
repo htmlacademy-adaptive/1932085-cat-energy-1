@@ -1,6 +1,8 @@
 .nav-list {
   .list-reset();
-  .tablet({display: flex});
+  .tablet({
+    display: flex;
+  });
 }
 .nav-list__link {
   .links-decor();
@@ -16,5 +18,16 @@
   .tablet({border: none; padding-bottom: 7px;});
 }
 .nav-list__item--current {
-  .tablet({border-bottom: 2px solid @basic-color4;});
+  .tablet({
+    border-bottom: 2px solid @basic-color4;
+  });
+  .desktop({
+    border-bottom: 2px solid @basic-color1;
+  });
+}
+.nav-list__link--white {
+  .desktop({
+    color: @title-light;
+
+  });
 }

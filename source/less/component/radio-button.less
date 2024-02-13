@@ -3,6 +3,11 @@
   display: block;
   padding-left: 43px;
   height: 30px;
+
+  .tablet({
+        height: 40px;
+        padding-left: 60px;
+  });
 }
 .radio-button__mark {
   position: absolute;
@@ -13,6 +18,11 @@
   background-color: @basic-color1;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
+
+  .tablet({
+    width: 40px;
+    height: 40px;
+  });
 }
 .radio-button__input[type="radio"] + .radio-button__mark {
   position: absolute;
@@ -21,6 +31,11 @@
   background-color: @basic-color1;
   border: 1px solid #cdcdcd;
   border-radius: 50%;
+
+  .tablet({
+    width: 40px;
+    height: 40px;
+  });
 }
 .radio-button__input[type="radio"]:checked + .radio-button__mark::before {
   position: absolute;
@@ -31,6 +46,13 @@
   height: 13px;
   background-color: @basic-color4;
   border-radius: 50%;
+
+  .tablet({
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  });
 }
 .radio-button__label {
   display: inline-block;
@@ -40,4 +62,9 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+
+  .tablet({
+    font-size: 20px;
+    line-height: normal;
+  });
 }
