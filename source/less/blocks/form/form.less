@@ -1,0 +1,51 @@
+.form {
+  .tablet({
+    margin-bottom: 60px;
+   });
+}
+
+.form__group {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.form__list {
+  .list-reset();
+}
+.form__button {
+  width: 100%;
+  margin-bottom: 21px;
+  .tablet({
+    width: auto;
+    margin-left: 50px;
+    margin-bottom: 0;
+  });
+}
+.form__remark {
+  display: block;
+  color: @title-dark;
+  text-align: center;
+  font-family: @lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+
+  .tablet({
+    color: @title-dark;
+    font-family: @lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    padding-top: 18px;
+  });
+}
+.form__button-wrapper {
+  margin: 0 20px 32px 20px;
+
+  .tablet({
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7.2%;
+  });
+}

@@ -1,0 +1,30 @@
+.form-comments {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 2px @basic-color4;
+}
+.form-comments__title {
+  position: relative;
+  margin-bottom: 38px;
+
+  .tablet({
+    display: block;
+    margin-bottom: 78px;
+  });
+}
+
+.form-comments__text {
+  display: block;
+  margin: 0 20px 22px 20px;
+  padding-top: 14px;
+  min-height: 135px;
+  outline: none;
+  resize: none;
+  border: 1px solid #e7e7e7;
+
+  .tablet({
+      margin: 0 70px 65px 70px;
+      border: 1px solid #e7e7e7;
+      min-height: 158px;
+    });
+}

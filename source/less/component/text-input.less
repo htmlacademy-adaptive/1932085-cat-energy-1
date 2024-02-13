@@ -1,0 +1,71 @@
+.text-input {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+.text-input__label {
+  display: inline-block;
+  color: @text-color;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  padding-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.text-input__input {
+  flex-grow: 1;
+  color: @text-color;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  height: 43px;
+  border: 1px solid #e7e7e7;
+  padding: 0 14px;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0 18px;
+  }
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.text-input__input--mail + svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 13px;
+  stroke: #222222;
+
+  .tablet({
+  right: 15px;
+});
+}
+.text-input__input--phone + svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 13px;
+  fill: #222222;
+
+  .tablet({
+    right: 15px;
+  });
+}

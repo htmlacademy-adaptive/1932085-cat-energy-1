@@ -1,0 +1,36 @@
+.contacts {
+  margin: 8px 0 13px 0;
+  border-top: solid 2px @basic-color4;
+
+  .tablet({
+    margin: 26px 0 24px 0;
+    margin-bottom: 64px;
+  });
+}
+
+.contacts__list {
+  margin: 0 20px 12px 20px;
+
+  .tablet({
+    margin: 0 70px;
+  });
+}
+.contacts__legend {
+  max-width: 187px;
+  margin-bottom: 33px;
+  text-wrap: wrap;
+  padding-top: 22px;
+
+  .tablet({
+    max-width: none;
+    margin-bottom: 66px;
+    padding-top: 0;
+  });
+}
+.contacts__item:not(:last-child) {
+  margin-bottom: 14px;
+
+  .tablet({
+    margin-bottom: 18px;
+  });
+}

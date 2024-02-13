@@ -1,0 +1,140 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 280px;
+  padding: 20px 20px 23px 20px;
+  border-bottom: 2px solid #ebebeb;
+
+  .tablet({
+   // outline: 1px solid tomato;
+    position: relative;
+    display: block;
+  min-height: 511px;
+  border: none;
+  padding: 0;
+});
+}
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .tablet({
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: @card-color;
+    height: 84%;
+    box-sizing: border-box;
+    padding: 0 11.4% 40px 11.4%;
+
+  });
+}
+
+.card__button {
+  width: 100%;
+  margin-top: 17px;
+  .tablet({
+    width: auto;
+    margin: 0;
+  });
+}
+
+.card__image-container {
+  display: flex;
+  order: -1;
+  width: 50%;
+  min-height: 107px;
+
+  .tablet ({
+    margin-top: -71px;
+    width: 100%;
+    height: 210px;
+  });;
+}
+.card__title {
+  width: 60%;
+  margin-right: auto;
+  max-height: 50%;
+
+  .tablet({
+    display: block;
+    width: 68%;
+    margin: 22px auto 0 auto;
+  });
+}
+.card__title--more {
+  width: 100%;
+  justify-content: center;
+
+  .tablet({
+    width: 60%;
+    margin-bottom: 13px;
+      });
+}
+.card__image-container picture {
+  margin: auto;
+}
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 50%;
+
+  .tablet ({
+    text-align: center;
+    width: 100%;
+    margin-bottom: 33px;
+});;
+}
+
+.card__text {
+  color: @text-color;
+  text-align: center;
+  font-family: @lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+
+  .tablet({
+    font-size: 16px;
+    line-height: 20px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 45px;
+  });
+}
+
+.card--more {
+  display: block;
+  padding-top: 25px;
+
+  .tablet({
+    min-height: 379px;
+  });
+}
+
+.card__container--more {
+  .tablet({
+    padding: 106px 36px 40px 36px;
+    background-color: @basic-color1;
+  });
+}
+
+.card__wrapper--more {
+  width: 100%;
+  background-image: url("../img/plus-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 54px;
+  gap: 8px;
+
+  .tablet({
+   // box-sizing: border-box;
+  background-image: url("../img/plus-tablet.svg");
+  background-position: top center;
+  padding-top: 89px;
+});
+}

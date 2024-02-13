@@ -1,0 +1,147 @@
+.example {
+  background-color: @basic-color3;
+  margin: 0;
+  padding: 25px 20px 40px 20px;
+
+  .tablet({
+    background-color: @basic-color1;
+    border-top: 2px solid  #e6e6e6;
+    padding: 0;
+      });
+}
+
+.example picture {
+  .tablet({ display: block;
+    background-color: @basic-color3;
+    height: 619px; //чтоб отодвинуть след поле
+  });
+}
+
+.example__title {
+  color: @title-dark;
+  font-family: @oswald;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 0 0 38px 0;
+
+  .tablet({
+    font-size: 60px;
+    line-height: 60px;
+    margin: 45px 30px 60px 30px;
+    });
+}
+.example__text {
+  min-width: 285px;
+  margin: 0 0 20px 0;
+
+  .tablet({
+    margin: 0 30px 53px 30px;
+  });
+}
+.example__list {
+  display: flex;
+  gap: 30px;
+  min-width: 280px;
+  justify-content: left;
+  margin: 0;
+
+  .tablet({
+    gap: 42px;
+    min-width: 366px;
+  });
+}
+.example__number {
+  color: @title-dark;
+  text-align: center;
+  font-family: @oswald;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 7px 0;
+  min-width: 82px;
+
+  .tablet({
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 13px;
+  });
+}
+.example__cost {
+  color: @title-dark;
+  text-align: center;
+  font-family: @oswald;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  .tablet({
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: right;
+    font-size: 20px;
+    line-height: 31px;
+    margin: 0;
+    max-width: 175px;
+    });
+}
+.example__statistics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  gap: 34px;
+  margin: 0;
+
+  .tablet({
+    margin: 0 auto;
+    max-width: 708px;
+    width: 100%;
+        justify-content: space-between;
+        margin-bottom: 99px;
+  });
+}
+
+.example__item {
+  position: relative;
+  min-width: 82px;
+  max-height: 39px;
+  text-align: center;
+  border: solid 1.8px #cdcdcd;
+  border-radius: 4px;
+  padding: 15px 20px 0 20px;
+
+  .tablet({
+    min-width: 121px;
+    max-height: 57px;
+
+});
+}
+
+.example__description {
+  color: @text-color;
+  text-align: center;
+  font-family: @lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  margin: 0 auto;
+  max-width: 80px;
+  background-color: #e6e6e6;
+
+  .tablet({
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 162px;
+    background-color: @basic-color1;
+  });
+}
+.example__slider {
+  display: flex;
+  margin: 0 auto;
+}
