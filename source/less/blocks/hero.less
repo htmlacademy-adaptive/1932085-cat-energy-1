@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
-  margin: 0 auto 25px;
+  margin: 27px auto 25px;
   width: 300px;
 
   .tablet({
@@ -24,11 +24,12 @@
     text-align: start;});
 
   .desktop({
-    position: absolute;
-    left: -90.5%;
+    position: relative;
+    right: 652px;
     top: 166px;
-    });
+         });
 }
+
 .hero__derscriptor {
   text-align: center;
   color: @title-light;
@@ -38,24 +39,29 @@
   line-height: 14px;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 302px;
 
   .tablet({color: @title-dark;
     font-size: 20px;
     line-height: 20px;
     text-align: start;
+    max-width: 50%;
     margin-left: 120px;});
 
   .desktop({
-    position: absolute;
-    left: -90%;
+    position: relative;
+    right: 1686px;
     top: 387px;
       });
 }
 
 .hero__background-cat-wrapper {
-  position: relative;
-  background: url("../img/index-background-desktop2-green.jpg") no-repeat center
-    top;
+  z-index: -10;
+  position: absolute;
+  background-image: url("../img/index-background-desktop2-green.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
   background-size: auto 100%;
   background-color: #62a53b;
   padding: 27px 0 148px 0;
@@ -63,28 +69,27 @@
   box-sizing: border-box;
 
   .tablet({background: none; padding: 0;});
+
   .desktop({
     display: flex;
     background-image: url("../../img/index-background-desktop1.jpg");
+    background-repeat: no-repeat;
     height: 694px;
-    width: 50%;
-
     left: 50%;
     top: -119px;
   });
 }
 .hero__background-can-wrapper {
   position: relative;
-  padding-bottom: 138px;
 
   .tablet({
-    margin-bottom: 369px;
+    margin-bottom: -48px;
   });
 
   .desktop({
     margin: 0;
     padding: 0;
- margin-bottom: -36px;
+    margin-bottom: -36px;
   });
 }
 .hero__background-can-wrapper::after {
@@ -92,7 +97,7 @@
   content: "";
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: 44px;
   background-image: url("../img/index-can-mobile1.png");
   width: 280px;
   height: 270px;
@@ -102,7 +107,8 @@
     z-index: -10;
       width: 709px;
     height: 609px;
-    bottom: -369px;
+    bottom: 48px;
+
     });
 
   .desktop({ background-image: url("../img/index-can-desktop.png");
@@ -117,9 +123,10 @@
   .links-decor();
   margin: 0 20px 20px 20px;
 
-  .tablet({position: absolute;
-  top: 231px;
+  .tablet({position: relative;
+  top:-253px;
   left: 100px;
+  display: inline-block;
   margin-left: 21px;
  });
 

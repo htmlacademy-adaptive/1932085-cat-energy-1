@@ -13,6 +13,7 @@
   border: 0;
   cursor: pointer;
   min-height: 40px;
+  .links-decor();
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -23,20 +24,12 @@
     min-width: 244px;
   }
 
-  @media (min-width: @desktop-width) {
-    max-width: 570px;
-  }
+  .desktop({
+
+    min-width: 129px;
+  });
 }
-.button-order--more {
-  color: @text-color;
-  background-color: @basic-color2;
-  .links-decor();
-  font-size: 16px;
-  line-height: 20px;
-  box-sizing: border-box;
-  padding: 10px 20px;
-  min-height: 40px;
-}
+
 .button-order--catalog {
   .tablet({
     font-size: 16px;
@@ -44,5 +37,9 @@
     box-sizing: border-box;
     padding: 10px 20px;
     min-height: 40px;
+  });
+
+  .desktop({
+
   });
 }

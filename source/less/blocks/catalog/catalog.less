@@ -4,24 +4,47 @@
   .tablet({
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     column-gap: 8.8%;
-    row-gap: 60px;
+    row-gap: 81px;
     min-width: 708px;
     margin: 0 30px;
     margin-bottom: 70px;
    });
+
+  .desktop({
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 63px;
+    margin: 0 110px;
+    width: 1220px;
+   });
 }
 .catalog {
   min-width: 320px;
+
+  .desktop({
+    width: 1440px;
+  });
 }
 .catalog__title {
   margin: 0;
-  padding: 27px 0 41px 20px;
+  padding: 27px 0 38px 20px;
   border-bottom: 2px solid #ebebeb;
 
   .tablet ({
     border: none;
    padding: 0;
-   margin: 61px 30px 84px 30px;
+   margin: 61px 30px 106px 30px;
   });;
+
+  .desktop ({
+   margin: 74px 110px 84px 110px;
+  });;
+}
+.catalog__item {
+  .tablet({
+margin-top: 60px;
+
+  });
 }

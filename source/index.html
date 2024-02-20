@@ -39,12 +39,11 @@
     <h2 class="visually-hidden">Питание для котов</h2>
     <section class="main-page__hero hero">
       <div class="hero__background-can-wrapper">
-        <div class="hero__background-cat-wrapper">
-          <h3 class="hero__title">Функциональное питание для котов</h3>
-          <p class="hero__derscriptor">Занялся собой? Займись котом!</p>
-        </div>
+        <h3 class="hero__title">Функциональное питание для котов</h3>
+        <p class="hero__derscriptor">Занялся собой? Займись котом!</p>
+        <a href="form.html" class="hero__button button-order">Подобрать программу</a>
+        <div class="hero__background-cat-wrapper"></div>
       </div>
-      <a href="form.html" class="hero__button button-order">Подобрать программу</a>
     </section>
     <section class="main-page__weight-control weight-control">
       <ul class="weight-control__list">
@@ -96,10 +95,29 @@
         </dl>
         <p class="example__cost">Затраты на питание: 15 000 РУБ</p>
       </div>
-      <picture>
-        <source media="(min-width: 768px)" srcset="./img/cat-slider-tablet.png">
-        <img src="./img/slides.png" alt="Кот меняет вес." class="example__slider">
-      </picture>
+      <div class="slider">
+        <div class="slider__container">
+          <ul class="slider__list">
+            <li class="slider__screen slider__screen--before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/cat-slider-tablet.png">
+                <img class="slider__image" src="./img/slider/before.png" srcset="./img/slider/before@2x.png 2x"
+                  alt="Кот меняет вес.">
+              </picture>
+            </li>
+            <li class="slider__screen slider__screen--after">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/cat-slider-tablet.png">
+                <img class="example__slider" src="./img/slider/after.png" srcset="./img/slider/after@2x.png 2x"
+                  alt="Кот меняет вес.">
+              </picture>
+            </li>
+          </ul>
+          <button class="slider__control">
+            <span class="visually-hidden">Переключить состояние кота</span>
+          </button>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer">
