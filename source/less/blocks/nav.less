@@ -24,9 +24,13 @@
 }
 .nav--closed .nav__list {
   display: none;
-  .tablet({display: flex;
-  gap: 33px;});
+
+  .tablet({
+    display: flex;
+    column-gap: 33px;
+});
 }
+
 .nav--opened .nav__list {
   display: block;
   position: absolute;

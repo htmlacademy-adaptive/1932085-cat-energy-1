@@ -29,7 +29,7 @@
     z-index: 20;
     font-size: 20px;
     width: 1220px;
-    margin: 51px 110px 0 110px;
+    margin: 51px auto 0 auto;
   });
 }
 .header__logo {
@@ -37,12 +37,27 @@
   top: 13px;
   left: 23px;
 
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
   .tablet({
     position: static;
     margin-top: 10px;
+    margin-right: 94px;
   });
 
   .desktop({
     margin-top: 4px;
+    margin-right: 542px;
+  });
+}
+.header_nav {
+  .desktop({
+
   });
 }

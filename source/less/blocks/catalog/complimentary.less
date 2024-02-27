@@ -19,8 +19,7 @@
 .complimentary__title {
   position: relative;
   z-index: 10;
-  display: flex;
-  width: fit-content;
+  display: inline-block;
   background-color: @basic-color1;
   padding-left: 20px;
   padding-right: 20px;
@@ -33,10 +32,11 @@
     margin-bottom: 68px;
   });
 }
+
 .complimentary__item {
   margin: 0 20px 0 20px;
 
   .tablet({
-margin: 0 30px;
+  margin: 0 30px;
   });
 }

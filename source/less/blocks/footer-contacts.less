@@ -10,6 +10,12 @@
     justify-content: space-between;
 
   });
+
+  .desktop({
+    width: 1220px;
+
+    margin: 12.5px auto;
+  });
 }
 .footer-contacts__logo-catenergy {
   display: block;
@@ -26,8 +32,16 @@
 
   });
 }
-.footer-contacts__logo-catenergy svg {
+.footer-contacts__svg-catenergy {
   fill: #111111;
+
+  &:hover,
+  &:focus {
+    fill: #3e3e3e;
+  }
+  &:active {
+    fill: #6b6b6b;
+  }
 }
 .footer-contacts__list {
   display: flex;
@@ -35,8 +49,16 @@
   justify-content: center;
   height: 24px;
 }
-.footer-contacts__link svg {
+.footer-contacts__svg {
   fill: #666666;
+
+  &:hover,
+  &:focus {
+    fill: @basic-color4;
+  }
+  &:active {
+    fill: rgba(104, 183, 56, 0.3);
+  }
 }
 .footer-contacts__social-media {
   padding: 18px 0;
@@ -55,7 +77,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  fill: #444444;
+
   margin-top: 20px;
 
   .tablet({
@@ -65,4 +87,23 @@
       margin: auto 0;
 
   });
+}
+.footer-contacts__name-htmlacademy {
+  fill: #444444;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer-contacts__trademark-htmlacademy {
+  fill: #444444;
+
+  &:hover,
+  &:focus {
+    fill: @basic-color4;
+  }
+  &:active {
+    fill: rgba(104, 183, 56, 0.3);
+  }
 }

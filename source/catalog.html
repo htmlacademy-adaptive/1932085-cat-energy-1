@@ -42,7 +42,7 @@
     <li class="catalog__item card">
       <div class="card__container">
         <div class="card__wrapper">
-          <h4 class="card__title card-title"><a href="#">Cat Energy PRO 500&nbsp;г</a></h4>
+          <h4 class="card__title card-title"><a class="card-title__link" href="#">Cat Energy PRO 500&nbsp;г</a></h4>
           <div class="card__list features">
             <h5 class="visually-hidden">Характеристики продукта</h5>
             <dl class="features__list">
@@ -65,13 +65,17 @@
 
       </div>
       <div class="card__image-container">
-        <a href="#">
+        <a class="card__image-link" href="#">
           <picture>
-
-            <source media="(min-width: 1440px)" srcset="./img/chicken-pro-500-desktop.png">
-            <source media="(min-width: 768px)" srcset="./img/chicken-pro-500-tablet.png">
-            <img src="./img/chicken-pro-500-mobile.png" alt="Питание Cat Energy PRO 500 г Курица.">
-
+            <source media="(min-width: 1440px)"
+              srcset="./img/products/chicken-500-desktop.png 1x, ./img/products/chicken-500-desktop@2x 2x" width="169"
+              height="210">
+            <source media="(min-width: 768px)"
+              srcset="./img/products/chicken-500-tablet.png 1x, ./img/products/chicken-500-tablet@2x 2x" width="200"
+              height="210">
+            <img class="card__image" src="img/products/chicken-500-mobile.png"
+              srcset="./img/products/chicken-500-mobile@2x 2x" width="140" height="107"
+              alt="Питание Cat Energy PRO 500 г Курица.">
           </picture>
         </a>
       </div>
@@ -116,7 +120,9 @@
     <li class="catalog__item card">
       <div class="card__container">
         <div class="card__wrapper">
-          <h4 class="card__title card-title"><a href="#">Cat Energy PRO 500&nbsp;г</a></h4>
+          <h4 class="card__title card-title">
+            <a class="card-title__link" href="#">Cat Energy PRO 500&nbsp;г</a>
+          </h4>
           <div class="card__list features">
             <h5 class="visually-hidden">Характеристики продукта</h5>
             <dl class="features__list">
@@ -136,7 +142,7 @@
           </div>
         </div>
         <div class="card__image-container">
-          <a href="#">
+          <a class="card__image-link" href="#">
 
             <picture>
               <source media="(min-width: 1440px)" srcset="./img/fish-pro-500-desktop.png">

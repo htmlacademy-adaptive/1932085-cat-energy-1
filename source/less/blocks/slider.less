@@ -1,4 +1,14 @@
 .slider {
+  .tablet({
+    position: relative;
+    background-color: @basic-color3;
+  });
+  .desktop ({
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 7.5%;
+  });;
 }
 
 .slider__container {
@@ -6,6 +16,11 @@
   width: 280px;
   height: 256px;
   position: relative;
+
+  .tablet({
+    width: 560px;
+  height: 618px;
+  });
 }
 
 .slider__list {
@@ -13,6 +28,11 @@
   width: 280px;
   height: 256px;
   position: relative;
+
+  .tablet({
+    width: 560px;
+  height: 512px;
+  });
 }
 
 .slider__screen {
@@ -22,18 +42,32 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #eaeaea;
+  background-color: @basic-color3;
   transition: width 2s ease;
 }
 
 .slider__screen--before {
   z-index: 5;
   width: 50%;
-  background-color: red;
 }
 
 .slider--after .slider__screen--before {
   width: 0;
+}
+
+.slider::before {
+  .tablet
+    ({
+    content: "";
+    position: absolute;
+    background-color: @basic-color1;
+    width: 100%;
+    height: 156px;
+  });;
+
+  .desktop({
+    display: none;
+  });
 }
 
 .slider--before .slider__screen--before {
@@ -42,28 +76,44 @@
 
 .slider__screen--after {
   z-index: 1;
-  background-color: green;
 }
 
 .slider__image {
   display: block;
   width: 280px;
   height: 256px;
+
+  .tablet({
+    width: 560px;
+  height: 512px;
+  });
 }
 
 .slider__control {
   position: absolute;
   width: 40px;
   height: 40px;
-  border: 2px solid blue;
-  background-color: aqua;
+  border: none;
+  background-image: url("../img/thumb-default.svg");
+  background-repeat: no-repeat;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
+
   z-index: 10;
   cursor: pointer;
   transition: left 2s ease;
+
+  &:hover {
+    background-image: url("../img/thumb-hover.svg");
+  }
+  &:active {
+    background-image: url("../img/thumb-active.svg");
+  }
+
+  .tablet({
+    top: 42%;
+  });
 }
 
 .slider--after .slider__control {
@@ -72,4 +122,29 @@
 
 .slider--before .slider__control {
   left: 100%;
+}
+.slider__screen--before::before,
+.slider__screen--after::before {
+  .tablet
+    ({
+      z-index: -1;
+      content: "";
+      position: absolute;
+  background-color: @basic-color1;
+
+    width: 100%;
+    height: 156px;
+  });;
+
+  .desktop({
+    height: 135px;
+  });
+}
+.example__cost-value {
+  .tablet({
+    margin-left: 86px;
+  });
+  .desktop({
+    margin-left: 0;
+  });
 }
