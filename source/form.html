@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт Энерджи - форма подбора продукта</title>
   <link rel="stylesheet" href="./css/style.css">
   <!--<link rel="icon" href="favicon.ico">
@@ -176,22 +177,24 @@
   </main>
 
   <footer class="footer footer--color">
-    <section class="footer__collaboration footer-collaboration  footer-collaboration--color">
-      <h3 class="visually-hidden">Приглашаем к сотрудничеству.</h3>
-      <p class="footer-collaboration__invitation">Приглашаем <br> к сотрудничеству дилеров!</p>
-      <p class="footer-collaboration__address">ул. Большая Конюшенная, д. 19/8 <br> <br> Санкт-Петербург</p>
-    </section>
-    <section class="footer footer-map">
-      <h3 class="visually-hidden">Карта с локацией.</h3>
-      <div class="map">
-        <div class="map__google"><iframe class="map__iframe"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198161!2d30.320472477341305!3d59.9387191620936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1706195306502!5m2!1sru!2sua"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="footer__container">
+      <section class="footer__collaboration footer-collaboration  footer-collaboration--color">
+        <h3 class="visually-hidden">Приглашаем к сотрудничеству.</h3>
+        <p class="footer-collaboration__invitation">Приглашаем <br> к сотрудничеству дилеров!</p>
+        <p class="footer-collaboration__address">ул. Большая Конюшенная, д. 19/8 <br> <br> Санкт-Петербург</p>
+      </section>
+      <section class="footer-map">
+        <h3 class="visually-hidden">Карта с локацией.</h3>
+        <div class="map">
+          <div class="map__google"><iframe class="map__iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198161!2d30.320472477341305!3d59.9387191620936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1706195306502!5m2!1sru!2sua"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="map__image"><img src="./img/location.jpg" alt="Карта с локацией."></div>
         </div>
-        <div class="map__image"><img src="./img/location.jpg" alt="Карта с локацией."></div>
-      </div>
-    </section>
+      </section>
+    </div>
     <section class="footer__contacts footer-contacts">
       <h3 class="visually-hidden">Контакты.</h3>
       <a class="footer-contacts__logo-catenergy" href="index.html">

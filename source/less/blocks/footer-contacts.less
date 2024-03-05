@@ -90,20 +90,22 @@
 }
 .footer-contacts__name-htmlacademy {
   fill: #444444;
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .footer-contacts__trademark-htmlacademy {
   fill: #444444;
+}
 
-  &:hover,
-  &:focus {
-    fill: @basic-color4;
-  }
-  &:active {
-    fill: rgba(104, 183, 56, 0.3);
-  }
+.footer-contacts__logo-htmlacademy:hover
+  .footer-contacts__trademark-htmlacademy,
+.footer-contacts__logo-htmlacademy:focus
+  .footer-contacts__trademark-htmlacademy {
+  fill: @basic-color4;
+}
+.footer-contacts__logo-htmlacademy:active
+  .footer-contacts__trademark-htmlacademy {
+  fill: @basic-color4;
+}
+.footer-contacts__logo-htmlacademy:active {
+  opacity: 0.3;
 }

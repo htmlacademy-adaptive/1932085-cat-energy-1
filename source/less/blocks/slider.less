@@ -6,8 +6,8 @@
   .desktop ({
     position: absolute;
     margin: 0;
-    top: 0;
-    right: 7.5%;
+    top: -134px;
+    right: 0;
   });;
 }
 
@@ -94,6 +94,7 @@
   width: 40px;
   height: 40px;
   border: none;
+  border-radius: 50%;
   background-image: url("../img/thumb-default.svg");
   background-repeat: no-repeat;
   top: 50%;
@@ -104,15 +105,47 @@
   cursor: pointer;
   transition: left 2s ease;
 
-  &:hover {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 256px;
+    border-left: 4px solid #666666;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .tablet({
+      height: 512px;
+    });
+  }
+  &:hover::before {
+    border-color: #68b738;
+  }
+  &:active::before {
+    border-color: #5eaa2f;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+
+    background-image: url("../img/thumb-default.svg");
+  }
+  &:hover::after {
     background-image: url("../img/thumb-hover.svg");
   }
-  &:active {
+  &:active::after {
     background-image: url("../img/thumb-active.svg");
   }
 
   .tablet({
     top: 42%;
+
   });
 }
 

@@ -26,7 +26,7 @@
 .example__container {
   .desktop({
     display: flex;
-
+position: relative;
     justify-content: space-between;
 
         width: 1220px;
@@ -51,9 +51,10 @@ padding-bottom: 75px;
 
   .desktop({
 
-      width: 900px;
+      width: 1220px;
       margin: 0 auto 76px auto;
-      padding-right: 320px;
+      padding-right: 667px;
+      box-sizing: border-box;
     });
 }
 .example__text {
@@ -162,7 +163,7 @@ width: 450px;
   text-align: center;
   border: solid 1.8px #cdcdcd;
   border-radius: 4px;
-  padding: 15px 20px 0 20px;
+  padding: 20px 20px 0 20px;
 
   .tablet({
     min-width: 121px;
@@ -197,5 +198,6 @@ width: 450px;
 .exapmle__slider {
   .desktop({
     margin-top: 44px;
+    max-width: 625px;
   });
 }
