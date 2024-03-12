@@ -8,13 +8,31 @@
     border-top: 2px solid  #e6e6e6;
     padding: 0;
       });
+
+  .desktop({
+    position: relative;
+
+        border: none;
+      });
 }
 
-.example picture {
-  .tablet({ display: block;
-    background-color: @basic-color3;
-    height: 619px; //чтоб отодвинуть след поле
-  });
+.example__background {
+  .desktop({
+  background-color: @basic-color3;
+  min-height: 462px;
+});
+}
+
+.example__container {
+  .desktop({
+    display: flex;
+position: relative;
+    justify-content: space-between;
+
+        width: 1220px;
+        margin: 0 auto;
+padding-bottom: 75px;
+      });
 }
 
 .example__title {
@@ -30,6 +48,14 @@
     line-height: 60px;
     margin: 45px 30px 60px 30px;
     });
+
+  .desktop({
+
+      width: 1220px;
+      margin: 0 auto 76px auto;
+      padding-right: 667px;
+      box-sizing: border-box;
+    });
 }
 .example__text {
   min-width: 285px;
@@ -37,6 +63,13 @@
 
   .tablet({
     margin: 0 30px 53px 30px;
+  });
+
+  .desktop({
+    width: 432px;
+    margin: 0;
+    margin-top: 70px;
+    margin-bottom: 66px;
   });
 }
 .example__list {
@@ -50,6 +83,10 @@
     gap: 42px;
     min-width: 366px;
   });
+
+  .desktop ({
+    margin-bottom: 20px;
+  });;
 }
 .example__number {
   color: @title-dark;
@@ -83,6 +120,7 @@
   .tablet({
     display: flex;
     flex-wrap: wrap;
+
     align-content: center;
     text-align: right;
     font-size: 20px;
@@ -90,6 +128,12 @@
     margin: 0;
     max-width: 175px;
     });
+
+  .desktop({
+    max-width: unset;
+      width: 324px;
+      justify-content: space-between;
+        });
 }
 .example__statistics {
   display: flex;
@@ -105,6 +149,11 @@
         justify-content: space-between;
         margin-bottom: 99px;
   });
+
+  .desktop({
+margin: 0;
+width: 450px;
+  });
 }
 
 .example__item {
@@ -114,7 +163,7 @@
   text-align: center;
   border: solid 1.8px #cdcdcd;
   border-radius: 4px;
-  padding: 15px 20px 0 20px;
+  padding: 20px 20px 0 20px;
 
   .tablet({
     min-width: 121px;
@@ -140,8 +189,15 @@
     max-width: 162px;
     background-color: @basic-color1;
   });
+
+  .desktop({
+    background-color: @basic-color3;
+  });
 }
-.example__slider {
-  display: flex;
-  margin: 0 auto;
+
+.exapmle__slider {
+  .desktop({
+    margin-top: 44px;
+    max-width: 625px;
+  });
 }

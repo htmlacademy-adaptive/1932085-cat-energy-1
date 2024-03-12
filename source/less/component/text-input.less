@@ -1,8 +1,9 @@
 .text-input {
-  position: relative;
   display: flex;
   gap: 15px;
+  position: relative;
 }
+
 .text-input__label {
   display: inline-block;
   color: @text-color;
@@ -24,6 +25,15 @@
     line-height: 20px;
   }
 }
+
+.text-input__wrapper {
+  display: flex;
+  flex-grow: 1;
+
+  &:focus {
+    stroke: @basic-color4;
+  }
+}
 .text-input__input {
   flex-grow: 1;
   color: @text-color;
@@ -35,6 +45,10 @@
   height: 43px;
   border: 1px solid #e7e7e7;
   padding: 0 14px;
+  cursor: pointer;
+  &:hover {
+    border-color: #cdcdcd;
+  }
 
   @media (min-width: @tablet-width) {
     height: 52px;
@@ -63,9 +77,34 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 50%;
   transform: translateY(-50%);
   right: 13px;
-  fill: #222222;
+  stroke: #222222;
 
   .tablet({
     right: 15px;
   });
+
+  .desktop({
+    top:38%;
+    right: 17px;
+  });
+}
+
+.text-input__wrapper:focus .envelope,
+.text-input__wrapper:focus .phone {
+  stroke: @basic-color4;
+}
+
+.text-input__wrapper:error .envelope,
+.text-input__wrapper:error .phone {
+  stroke: #ff8282;
+}
+
+.text-input__wrapper:focus .text-input__input--mail,
+.text-input__wrapper:focus .text-input__input--phone {
+  border: solid 2 px @text-color;
+}
+
+.text-input__wrapper:error .text-input__input--mail,
+.text-input__wrapper:error .text-input__input--phone {
+  border: solid 2 px #ff8282;
 }

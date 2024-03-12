@@ -1,7 +1,8 @@
 .gift {
   position: relative;
   margin: 35px 20px;
-  background-image: url("../../img/gift-mobile.jpg");
+  background-image: url("../img/gift-mobile.jpg");
+  background-color: green;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 290px;
@@ -12,7 +13,7 @@
     left: 50%;
     top: 57px;
     transform: translateX(-50%);
-    background-image: url("../../img/icon_gift-mobile.svg");
+    background-image: url("../img/icon_gift-mobile.svg");
     width: 78px;
     height: 80px;
     background-repeat: no-repeat;
@@ -20,19 +21,39 @@
 
   .tablet({
 
-    background-image: url("../../img/gift-tablet.jpg");
+   background-image: url( ../img/gift-tablet.jpg );
+   background-color: @basic-color4;
     display: block;
     min-height: 200px;
     margin: 70px 30px 75px 30px;
 
     &::before  {
-      top: 50%;
+      top: 49%;
       transform: translateY(-50%);
       left: 11%;
     }
   });
+
+  .desktop({
+background-image: url( ../img/gift-desktop.jpg );
+    background-color: green;
+    width: 245px;
+    display: flex;
+align-items: flex-end;
+    margin: 0;
+
+
+    &::before  {
+      top: 93px;
+      left: 34%;
+
+
+    }
+  });
 }
+
 .gift__descripton {
+  position: relative;
   color: @title-light;
   text-align: center;
   font-family: @lato;
@@ -42,7 +63,7 @@
   margin: 0 auto;
   padding-top: 187px;
   width: 58%;
-  padding-bottom: 70px;
+  padding-bottom: 27px;
 
   .tablet({
     margin: 0;
@@ -52,4 +73,12 @@
     text-align: left;
 
   });
+  .desktop ({
+    margin: 0 auto;
+    width: 162px;
+    text-align: center;
+    bottom: 0;
+    padding-bottom: 43px;
+padding-top: 185px;
+  });;
 }

@@ -14,10 +14,16 @@
     padding-right: 20px;
     width: 40%;
   });
+
+  .desktop({
+    display: inline-block;
+    margin: 0;
+
+  });
 }
 .complimentary-item {
   border-bottom: 1px solid #cdcdcd;
-  padding: 12px 0 18px 0;
+  padding: 11px 0 18px 0;
 
   &:first-child {
     padding-top: 14px;
@@ -36,6 +42,21 @@
     padding-top: 25px;
          };
   });
+
+  .desktop({
+    width: 895px;
+    margin: 0;
+    flex-wrap: nowrap;
+    padding-top: 14px;
+    padding-bottom: 16px;
+padding-right: 0;
+align-items: center;
+
+&:first-child {
+  padding-top: 14px;
+  padding-bottom: 15px;
+       };
+  });
 }
 
 .complimentary-item__button {
@@ -44,4 +65,9 @@
   .tablet({
     display: block;
   });
+
+  .desktop ({
+    max-width: 244px;
+
+  });;
 }

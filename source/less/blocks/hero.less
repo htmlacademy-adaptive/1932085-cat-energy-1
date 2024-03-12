@@ -1,8 +1,68 @@
 .hero {
   height: 100%;
   max-width: 100%;
-  .tablet({position: relative;});
+
+  .tablet({
+    position: relative;
+    width: 709px;
+    margin: 0 auto;
+    padding: 61px 0 506px 120px;
+  });
+
+  .desktop({
+    width: 100%;
+    padding: 0 0 159px 0;
+    min-height: 500px;
+
+  });
 }
+
+.hero::before {
+  .tablet({
+    position: absolute;
+    content: "";
+    background-image: url("../img/index-can-tablet1.png");
+    z-index: 10;
+     width: 768px;
+    height: 609px;
+     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  });
+
+  .desktop({
+    background-image: url("../img/index-can-desktop.png");
+    transform: translateX(-30%);
+    width: 552px;
+    height: 499px;
+    bottom: unset;
+    top: 26px;
+  });
+}
+
+.hero::after {
+  .desktop({
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: calc(100% + 36px);
+  overflow: hidden;
+  background-image: url( "../img/index-background-desktop1.jpg");
+  background-repeat: no-repeat;
+  top: -118px;
+  right: 0;
+});
+}
+
+.hero__block {
+  .desktop({
+    margin: 0 auto;
+    padding: 107px 0 0 80px;
+    width: 1220px;
+    box-sizing: border-box;
+  });
+}
+
 .hero__title {
   color: @title-light;
   text-align: center;
@@ -13,23 +73,24 @@
   font-weight: 400;
   line-height: 36px;
   margin: 0 auto 25px;
-  width: 300px;
+  width: 282px;
 
   .tablet({
     font-size: 60px;
     line-height: 60px;
     color: @title-dark;
     width: 450px;
-    margin: 60px auto 40px 120px;
-    text-align: start;});
+    margin: 0;
+    text-align: start;
+  margin-bottom: 39px;});
 
   .desktop({
-    position: absolute;
-    left: -90.5%;
-    top: 166px;
-    });
+    position: relative;
+
+         });
 }
-.hero__derscriptor {
+
+.hero__descriptor {
   text-align: center;
   color: @title-light;
   font-family: @oswald;
@@ -43,48 +104,40 @@
     font-size: 20px;
     line-height: 20px;
     text-align: start;
-    margin-left: 120px;});
-
-  .desktop({
-    position: absolute;
-    left: -90%;
-    top: 387px;
-      });
+    max-width: 50%;
+    margin-left: 0;
+    margin-bottom: 50px;
+    });
 }
 
-.hero__background-cat-wrapper {
-  position: relative;
-  background: url("../img/index-background-desktop2-green.jpg") no-repeat center
-    top;
+.hero__cat-wrapper {
+  background-image: url("../img/index-background-desktop2-green.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: auto 100%;
   background-color: #62a53b;
-  padding: 27px 0 148px 0;
+  padding: 27px 20px 148px 20px;
   min-height: 302px;
   box-sizing: border-box;
 
-  .tablet({background: none; padding: 0;});
-  .desktop({
-    display: flex;
-    background-image: url("../../img/index-background-desktop1.jpg");
-    height: 694px;
-    width: 50%;
-
-    left: 50%;
-    top: -119px;
-  });
+  .tablet({
+    background: none;
+    padding: 0;
+    min-height: auto});
 }
 .hero__background-can-wrapper {
   position: relative;
-  padding-bottom: 138px;
+  padding-bottom: 136px;
 
   .tablet({
-    margin-bottom: 369px;
+    padding-bottom: 0;
+
   });
 
   .desktop({
     margin: 0;
     padding: 0;
- margin-bottom: -36px;
+
   });
 }
 .hero__background-can-wrapper::after {
@@ -92,39 +145,24 @@
   content: "";
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: 5px;
   background-image: url("../img/index-can-mobile1.png");
   width: 280px;
   height: 270px;
 
   .tablet({
-    background-image: url("../img/index-can-tablet1.png");
-    z-index: -10;
-      width: 709px;
-    height: 609px;
-    bottom: -369px;
-    });
-
-  .desktop({ background-image: url("../img/index-can-desktop.png");
-      z-index: 10;
-        width: 552px;
-      height: 499px;
-      top: 25px;
-      left: 58%;
-    });
+    display: none;
+  });
 }
+
 .hero__button {
   .links-decor();
   margin: 0 20px 20px 20px;
 
-  .tablet({position: absolute;
-  top: 231px;
-  left: 100px;
-  margin-left: 21px;
+  .tablet({
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+    margin-left: 0;
  });
-
-  .desktop({
-    top: 340px;
-  left: 11.7%;
-  });
 }

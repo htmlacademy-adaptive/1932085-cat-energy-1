@@ -3,12 +3,17 @@
   display: block;
   padding-left: 43px;
   height: 30px;
+  cursor: pointer;
 
   .tablet({
         height: 40px;
         padding-left: 60px;
   });
 }
+.radio-button__control:hover .radio-button__mark {
+  border: 2px solid #bababa;
+}
+
 .radio-button__mark {
   position: absolute;
   left: -1px;
@@ -54,6 +59,15 @@
     height: 18px;
   });
 }
+
+.radio-button__control:hover .radio-button__mark {
+  border: 2px solid #bababa;
+}
+
+.radio-button__control:disabled .radio-button__mark {
+  opacity: 0.3;
+}
+
 .radio-button__label {
   display: inline-block;
   color: @text-color;

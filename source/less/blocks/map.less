@@ -7,6 +7,11 @@
   .tablet({
     height: 400px;
   });
+  .desktop({
+z-index: 1;
+height: 100%;
+left: 0;
+});
 }
 .map__google {
   position: absolute;
@@ -15,6 +20,9 @@
   z-index: 10;
   .tablet({
     height: 400px;
+  });
+  .desktop({
+    height: 100%;
   });
 }
 .map__image {
@@ -26,7 +34,14 @@
   .tablet({
     height: 400px;
   });
+  .desktop({
+    height: 100%;
+  });
 }
 .map__iframe {
   width: 100%;
+
+  .desktop({
+    height: 100%;
+  });
 }

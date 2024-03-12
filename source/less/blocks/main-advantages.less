@@ -6,7 +6,8 @@
   });;
 
   .desktop({
-    margin: 0 110px 69px 110px;
+    width: 1220px;
+    margin: 0 auto 69px auto;
   });
 }
 .main-advantages__title {
@@ -24,6 +25,9 @@
     line-height: 60px;
     margin-bottom: 46px;
   });
+  .desktop({
+    margin-bottom: 41px;
+  });
 }
 .main-advantages__list {
   .list-reset();
@@ -36,8 +40,12 @@
   });
 
   .desktop({
-    display: flex;
-
+   /* display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;*/
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 81px;
+    width: 1220px;
   });
 }
 .main-advantages__item {
@@ -49,6 +57,11 @@
     padding: 139px 20px 57px 0;
     min-height: 72px;
     margin-bottom: 0;
+  });
+
+  .desktop({
+    width: 245px;
+
   });
 }
 .main-advantages__item br {
