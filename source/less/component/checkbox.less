@@ -53,7 +53,11 @@
   border: 2px solid #bababa;
 }
 
-.checkbox__control:disabled .checkbox__mark {
+.checkbox__control:disabled + checkbox__mark {
+  opacity: 0.3;
+}
+
+.checkbox__control:disabled ~ .checkbox__label {
   opacity: 0.3;
 }
 

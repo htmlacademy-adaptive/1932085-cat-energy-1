@@ -89,22 +89,16 @@ input[type="number"]::-webkit-inner-spin-button {
   });
 }
 
-.text-input__wrapper:focus .envelope,
-.text-input__wrapper:focus .phone {
+.text-input__input:focus + .envelope,
+.text-input__input:focus + .phone {
   stroke: @basic-color4;
 }
 
-.text-input__wrapper:error .envelope,
-.text-input__wrapper:error .phone {
+.text-input__input:invalid:not(:placeholder-shown) {
+  border: solid 2px #ff8282;
+}
+
+.text-input__input:invalid:not(:placeholder-shown) + .envelope,
+.text-input__input:invalid:not(:placeholder-shown) + .phone {
   stroke: #ff8282;
-}
-
-.text-input__wrapper:focus .text-input__input--mail,
-.text-input__wrapper:focus .text-input__input--phone {
-  border: solid 2 px @text-color;
-}
-
-.text-input__wrapper:error .text-input__input--mail,
-.text-input__wrapper:error .text-input__input--phone {
-  border: solid 2 px #ff8282;
 }
