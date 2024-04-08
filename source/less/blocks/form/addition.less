@@ -29,7 +29,7 @@
 
   .desktop ({
 
-});;
+});
 }
 
 .addition__list {
@@ -37,22 +37,23 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: @tablet-width) {
+  .tablet ({
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 57px 70px 27px 70px;
     column-gap: 9.2%;
     row-gap: 23px;
-  }
+  });
 
   .desktop ({
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 1220px;
     margin: 0 auto;
     column-gap: unset;
     justify-content: space-between;
-  });;
+  });
 }
 .addition__item:not(:last-child) {
   margin-bottom: 12px;

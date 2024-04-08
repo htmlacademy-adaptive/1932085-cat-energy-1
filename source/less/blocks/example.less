@@ -1,7 +1,7 @@
 .example {
   background-color: @basic-color3;
   margin: 0;
-  padding: 25px 20px 40px 20px;
+  padding: 23px 20px 40px 20px;
 
   .tablet({
     background-color: @basic-color1;
@@ -41,7 +41,7 @@ padding-bottom: 75px;
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
-  margin: 0 0 38px 0;
+  margin: 0 0 41px 0;
 
   .tablet({
     font-size: 60px;
@@ -80,12 +80,12 @@ padding-bottom: 75px;
   margin: 0;
 
   .tablet({
-    gap: 42px;
+    gap: 38px;
     min-width: 366px;
   });
 
   .desktop ({
-    margin-bottom: 20px;
+    margin-bottom: 44px;
   });;
 }
 .example__number {
@@ -97,13 +97,22 @@ padding-bottom: 75px;
   font-weight: 400;
   line-height: 24px;
   margin: 0 0 7px 0;
-  min-width: 82px;
+  width: 82px;
+  border: solid 1.8px #cdcdcd;
+  border-radius: 4px;
+  padding: 14px 21px 18px 20px;
 
   .tablet({
     font-size: 30px;
     line-height: 37px;
     margin-bottom: 13px;
+    width: 122px;
+    padding-bottom: 19px;
   });
+
+  .desktop ({
+    padding-top: 18px;
+  })
 }
 .example__cost {
   color: @title-dark;
@@ -114,14 +123,12 @@ padding-bottom: 75px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 17px auto 20px;
+  max-width: 100%;
 
   .tablet({
-    display: flex;
-    flex-wrap: wrap;
 
-    align-content: center;
+    padding-top: 6px;
     text-align: right;
     font-size: 20px;
     line-height: 31px;
@@ -130,24 +137,26 @@ padding-bottom: 75px;
     });
 
   .desktop({
+    display: flex;
     max-width: unset;
       width: 324px;
       justify-content: space-between;
         });
 }
+
+
 .example__statistics {
   display: flex;
   flex-wrap: wrap;
   width: 280px;
-  gap: 34px;
-  margin: 0;
+  margin: 0 auto;
 
   .tablet({
     margin: 0 auto;
     max-width: 708px;
     width: 100%;
         justify-content: space-between;
-        margin-bottom: 99px;
+        margin-bottom: 95px;
   });
 
   .desktop({
@@ -159,15 +168,14 @@ width: 450px;
 .example__item {
   position: relative;
   min-width: 82px;
-  max-height: 39px;
+
   text-align: center;
-  border: solid 1.8px #cdcdcd;
-  border-radius: 4px;
-  padding: 20px 20px 0 20px;
+
+
 
   .tablet({
     min-width: 121px;
-    max-height: 57px;
+
 
 });
 }
@@ -179,15 +187,17 @@ width: 450px;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
-  margin: 0 auto;
+  margin: -18px auto 0;
   max-width: 80px;
   background-color: #e6e6e6;
 
   .tablet({
     font-size: 14px;
     line-height: 14px;
-    max-width: 162px;
+    max-width: 136px;
     background-color: @basic-color1;
+   margin-top: -21px;
+
   });
 
   .desktop({

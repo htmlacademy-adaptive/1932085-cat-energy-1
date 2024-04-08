@@ -19,7 +19,8 @@
 
   .desktop({
     display: flex;
-    gap: 6.5%;
+    flex-wrap: wrap;
+    gap: 80px;
     margin-bottom: 71px;
   });
 }
@@ -30,6 +31,7 @@
   margin-bottom: 19px;
 
   .tablet({
+    position: relative;
     margin: 0;
     margin-bottom: 26px;
     padding: 77px 0 57px 7.3%;
@@ -58,8 +60,10 @@
     font-size: 36px;
     line-height: 36px;
   padding-left: 0;
-  margin-bottom: 24px
+  margin-bottom: 24px;
+max-width: 51%;
 });
+
   .desktop({
 margin-left: 162px;
 margin-bottom:  73px;;
@@ -107,13 +111,9 @@ margin-bottom:  73px;;
   height: 53px;
 
   .tablet({
-      top: 4px;
-   left: unset;
-   right: 63px;
-    background-image: url("../img/cat-slim-tablet.svg");
-    width: 200px;
-    height: 211px;
-    background-repeat: no-repeat;
+    display: none;
+
+
     });
 
   .desktop({
@@ -130,17 +130,12 @@ margin-bottom:  73px;;
   height: 50px;
 
   .tablet({
-    top: 15px;
-    left: unset;
-    right: 31px;
-   background-image: url("../img/cat-pro-tablet.svg");
-    width: 268px;
-    height: 200px;
-    background-repeat: no-repeat;
+  display: none;
     });
 
   .desktop({
       display: none;
+
     });
 }
 
@@ -185,7 +180,9 @@ margin-bottom:  73px;;
 
     left: calc(100% - 23px);
     top: 0;
-
+.desktop ({
+  top: 4px;
+})
 
 });
 }
@@ -195,9 +192,22 @@ margin-bottom:  73px;;
 }
 
 .weight-control__item--loss::before {
+
+  .tablet ({
+    position: absolute;
+    content: "";
+
+    top: 82px;
+    right: 62px;
+     background-image: url("../img/cat-slim-tablet.svg");
+     width: 200px;
+     height: 211px;
+     background-repeat: no-repeat;
+  });
+
   .desktop({
     position: absolute;
-    top: 39px;
+    top: 42px;
     left: 52px;
     display: block;
     content: "";
@@ -210,9 +220,22 @@ margin-bottom:  73px;;
 }
 
 .weight-control__item--gain::before {
+
+  .tablet({
+position: absolute;
+content: "";
+top: 90px;
+
+right: 31px;
+background-image: url("../img/cat-pro-tablet.svg");
+width: 268px;
+height: 200px;
+background-repeat: no-repeat;
+  });
+
   .desktop({
     position: absolute;
-    top: 44px;
+    top: 48px;
     left:34px;
     display: block;
     content: "";
