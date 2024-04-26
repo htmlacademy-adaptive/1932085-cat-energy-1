@@ -9,7 +9,7 @@
   text-transform: uppercase;
   background-color: @basic-color1;
   padding-top: 65px;
-  background: url("../img/logo-catenergy.svg") no-repeat center 23px;
+  background-image: url("../img/logo-catenergy.svg") no-repeat center 23px;
   border-bottom: 2px solid #ebebeb;
 
   .tablet({
@@ -24,13 +24,13 @@
     border: none;
   });
 
-.desktop({
-  z-index: 20;
-  font-size: 20px;
-  width: 1220px;
-  padding-top: 50px;
-  margin: 0 auto;
-});
+  .desktop({
+    z-index: 20;
+    font-size: 20px;
+    width: 1220px;
+    padding-top: 50px;
+    margin: 0 auto;
+  });
 }
 
 .header__logo {
@@ -52,8 +52,8 @@
     margin-right: 94px;
   });
 
-.desktop({
-  margin-top: 4px;
-  margin-right: 542px;
-});
+  .desktop({
+    margin-top: 4px;
+    margin-right: 542px;
+  });
 }

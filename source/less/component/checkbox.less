@@ -9,9 +9,9 @@
     height: 40px;
   });
 
-.desktop({
-  padding-left: 61px;
-});
+  .desktop({
+    padding-left: 61px;
+  });
 }
 
 .checkbox__mark {
@@ -30,13 +30,13 @@
     height: 40px;
   });
 
-.desktop({
-  left: -1px;
-  top: -13px;
-});
+  .desktop({
+    left: -1px;
+    top: -13px;
+  });
 }
 
-.checkbox__input[type="checkbox"]:checked+.checkbox__mark::before {
+.checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
   position: absolute;
   content: "";
   left: 2px;
@@ -55,11 +55,11 @@
   border: 2px solid #bababa;
 }
 
-.checkbox__control:disabled+checkbox__mark {
+.checkbox__control:disabled + .checkbox__mark {
   opacity: 0.3;
 }
 
-.checkbox__control:disabled~.checkbox__label {
+.checkbox__control:disabled ~ .checkbox__label {
   opacity: 0.3;
 }
 

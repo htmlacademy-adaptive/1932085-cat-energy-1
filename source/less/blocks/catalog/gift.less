@@ -7,7 +7,7 @@
     background-image: image-set(url("../img/gift-mobile@2x.webp"), url("../img/gift-mobile@2x.jpg"));
   }
 
-  background-color: green;
+  background-color: #64a73c;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 290px;
@@ -48,22 +48,22 @@
     }
   });
 
-.desktop({
-  background-image: image-set(url("../img/gift-desktop.webp"), url("../img/gift-desktop.jpg"));
-  background-color: green;
+  .desktop({
+    background-image: image-set(url("../img/gift-desktop.webp"), url("../img/gift-desktop.jpg"));
+    background-color: green;
 
-  @media (min-resolution: 2dppx) {
-    background-image: image-set(url("../img/gift-desktop@2x.webp"), url("../img/gift-desktop@2x.jpg"));
-  }
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(url("../img/gift-desktop@2x.webp"), url("../img/gift-desktop@2x.jpg"));
+    }
 
-  width: 245px;
-  margin: 0;
+    width: 245px;
+    margin: 0;
 
-  &::before {
-    top: 96px;
-    left: 34%;
-  }
-});
+    &::before {
+      top: 96px;
+      left: 34%;
+    }
+  });
 }
 
 .gift__descripton {
@@ -87,12 +87,12 @@
     text-align: left;
   });
 
-.desktop ({
-  margin: 0 auto;
-  width: 162px;
-  text-align: center;
-  bottom: 0;
-  padding-bottom: 43px;
-  padding-top: 184px;
-});
+  .desktop ({
+    margin: 0 auto;
+    width: 162px;
+    text-align: center;
+    bottom: 0;
+    padding-bottom: 43px;
+    padding-top: 184px;
+  });
 }
