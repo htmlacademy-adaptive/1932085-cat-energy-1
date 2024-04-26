@@ -3,6 +3,7 @@
     margin: 26px 0 24px 0;
     margin-bottom: 64px;
   });
+
   .desktop({
     margin-top: 17px;
     margin-bottom: 42px;
@@ -18,12 +19,13 @@
 
   .desktop ({
     display: flex;
-     width: 1220px;
-     margin: 0 auto;
-     justify-content: space-between;
-
-  });;
+    flex-wrap: wrap;
+    width: 1220px;
+    margin: 0 auto;
+    justify-content: space-between;
+  });
 }
+
 .contacts__legend {
   position: relative;
   z-index: 10;
@@ -45,13 +47,12 @@
   });
 
   .desktop({
-
     margin-bottom: 67px;
     margin-top: 6px;
     margin-left: 0;
     left: 50%;
     max-width: 610px;
-margin-left: -652px;
+    margin-left: -652px;
   });
 }
 
@@ -62,12 +63,14 @@ margin-left: -652px;
     margin-bottom: 18px;
   });
 }
+
 .contacts__item {
   .desktop({
-      width: 570px;
+    width: 570px;
     margin-bottom: 0;
   });
 }
+
 .contacts__inner-title-wrapper {
   position: relative;
   width: 100%;
@@ -82,11 +85,11 @@ margin-left: -652px;
     height: 2px;
 
     .tablet({
-     top: 19px;
+      top: 19px;
     });
 
-    .desktop ({
+    .desktop({
       top: 29px;
-    });;
+    });
   }
 }

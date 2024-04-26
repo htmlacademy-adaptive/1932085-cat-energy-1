@@ -2,14 +2,17 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кэт Энерджи - форма подбора продукта</title>
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-  <link rel="icon" type="image/x-icon" href="img/favicons/152-png.png" sizes="152x152">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./img/favicons/favicon.svg">
+  <link rel="apple-touch-icon" href="./img/favicons/180x180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="body">
@@ -51,8 +54,8 @@
           <ul class="form__list pet-details__list">
             <li class="pet-details__item text-input">
               <label for="petname" class="text-input__label">ИМЯ:*</label>
-              <input class="text-input__input" type="text" id="petname" placeholder="Барсик" value="Барсик" required
-                name="Pet-name">
+              <input class="text-input__input" type="text" id="petname" placeholder="введите имя питомца" value="Барсик"
+                required name="Pet-name">
             </li>
             <li class="pet-details__item text-input">
               <label for="petweight" class="text-input__label">Вес (кг):*</label>
@@ -129,12 +132,12 @@
       </fieldset>
       <fieldset class="form__group form-comments">
         <div class="form-comments__inner-title-wrapper">
-          <h3 class="form-comments__title fieldset-name" for="message">
+          <h3 class="form-comments__title fieldset-name">
             Комментарий
           </h3>
         </div>
         <div class="form-comments__wrapper">
-          <textarea class="form-comments__text text-input__input" name="comment"
+          <textarea class="form-comments__text textarea" name="comment"
             placeholder="Расскажите обо всех повадках кота" id="message"></textarea>
         </div>
       </fieldset>
@@ -149,28 +152,28 @@
             <label class="checkbox__control">
               <input class="visually-hidden checkbox__input" type="checkbox" name="sugar" id="sugar-substitute" checked>
               <span class="checkbox__mark"></span>
-              <span class="checkbox__label" for="sugar-substitute">сахарозаменитель</span>
+              <span class="checkbox__label">сахарозаменитель</span>
             </label>
           </li>
           <li class="addition__item checkbox">
             <label class="checkbox__control">
               <input class="visually-hidden checkbox__input" type="checkbox" name="drinking-water" id="water">
               <span class="checkbox__mark"></span>
-              <span class="checkbox__label" for="water">питьевая вода</span>
+              <span class="checkbox__label">питьевая вода</span>
             </label>
           </li>
           <li class="addition__item checkbox">
             <label class="checkbox__control">
               <input class="visually-hidden checkbox__input" type="checkbox" name="milk" id="milk">
               <span class="checkbox__mark"></span>
-              <span class="checkbox__label" for="milk">молоко</span>
+              <span class="checkbox__label">молоко</span>
             </label>
           </li>
           <li class="addition__item checkbox">
             <label class="checkbox__control">
               <input class="visually-hidden checkbox__input" type="checkbox" name="vitamins" id="vitamins">
               <span class="checkbox__mark"></span>
-              <span class="checkbox__label" for="vitamins">витамины</span>
+              <span class="checkbox__label">витамины</span>
             </label>
           </li>
         </ul>
@@ -192,19 +195,32 @@
       <section class="footer-map">
         <h3 class="visually-hidden">Карта с локацией.</h3>
         <div class="map">
-          <div class="map__google"><iframe class="map__iframe"
+          <div class="map__google">
+            <iframe class="map__iframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198161!2d30.320472477341305!3d59.9387191620936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1706195306502!5m2!1sru!2sua"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
-          <div class="map__image"><img src="./img/location.jpg" alt="Карта с локацией."></div>
+          <div class="map__image">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="./img/location-desktop.webp 1x, ./img/location-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/location-tablet.webp 1x, ./img/location-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/location.webp 1x, ./img/location@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/location-desktop.jpg 1x, ./img/location-desktop.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/location-tablet.jpg 1x, ./img/location-tablet.jpg 2x">
+              <img class="map__image-image" src="./img/location.jpg" srcset="./img/location@2x.jpg 2x" alt="Карта с локацией.">
+            </picture>
+          </div>
         </div>
       </section>
     </div>
     <section class="footer__contacts footer-contacts">
       <h3 class="visually-hidden">Контакты.</h3>
       <a class="footer-contacts__logo-catenergy" href="index.html">
-        <svg class="footer-contacts__svg-catenergy" width="128" height="24">
+        <svg class="footer-contacts__svg-catenergy" width="128" height="24"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.6236 21.9574C0.489608 20.2815 -0.0733133 18.2722 0.0213584 16.2383V7.7617C-0.115966 5.70593 0.411707 3.66097 1.52346 1.94043C2.62499 0.612766 4.32737 0 6.83086 0C9.33436 0 10.9366 0.612766 11.938 1.73617C13.0252 3.15904 13.56 4.9407 13.4401 6.74043V8.78298H8.53324V6.43404C8.57287 5.73932 8.47057 5.04378 8.23282 4.39149C8.10574 4.12819 7.90433 3.90969 7.65449 3.76409C7.40465 3.61849 7.11781 3.55245 6.83086 3.57447C6.12989 3.57447 5.62919 3.77872

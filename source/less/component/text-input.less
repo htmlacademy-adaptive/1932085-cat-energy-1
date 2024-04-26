@@ -15,15 +15,15 @@
   text-wrap: nowrap;
   padding-top: 14px;
 
-  @media (min-width: @tablet-width) {
+  .tablet({
     font-size: 20px;
     line-height: 20px;
-  }
+  });
 
-  @media (min-width: @desktop-width) {
+  .desktop({
     font-size: 20px;
     line-height: 20px;
-  }
+  });
 }
 
 .text-input__wrapper {
@@ -34,6 +34,7 @@
     stroke: @basic-color4;
   }
 }
+
 .text-input__input {
   flex-grow: 1;
   color: @text-color;
@@ -46,21 +47,24 @@
   border: 1px solid #e7e7e7;
   padding: 0 14px;
   cursor: pointer;
+
   &:hover {
     border-color: #cdcdcd;
   }
 
-  @media (min-width: @tablet-width) {
+  .tablet({
     height: 52px;
     font-size: 20px;
     line-height: 20px;
     padding: 0 18px;
-  }
+  });
 }
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+
+.text-input__input::-webkit-outer-spin-button,
+.text-input__input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
 .text-input__input--mail + svg {
   position: absolute;
   top: 50%;
@@ -69,9 +73,10 @@ input[type="number"]::-webkit-inner-spin-button {
   stroke: #222222;
 
   .tablet({
-  right: 15px;
-});
+    right: 15px;
+  });
 }
+
 .text-input__input--phone + svg {
   position: absolute;
   top: 50%;
@@ -89,22 +94,16 @@ input[type="number"]::-webkit-inner-spin-button {
   });
 }
 
-.text-input__wrapper:focus .envelope,
-.text-input__wrapper:focus .phone {
+.text-input__input:focus + .envelope,
+.text-input__input:focus + .phone {
   stroke: @basic-color4;
 }
 
-.text-input__wrapper:error .envelope,
-.text-input__wrapper:error .phone {
+.text-input__input:invalid:not(:placeholder-shown) {
+  border: solid 2px #ff8282;
+}
+
+.text-input__input:invalid:not(:placeholder-shown) + .envelope,
+.text-input__input:invalid:not(:placeholder-shown) + .phone {
   stroke: #ff8282;
-}
-
-.text-input__wrapper:focus .text-input__input--mail,
-.text-input__wrapper:focus .text-input__input--phone {
-  border: solid 2 px @text-color;
-}
-
-.text-input__wrapper:error .text-input__input--mail,
-.text-input__wrapper:error .text-input__input--phone {
-  border: solid 2 px #ff8282;
 }

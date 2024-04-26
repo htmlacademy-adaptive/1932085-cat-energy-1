@@ -1,6 +1,11 @@
 .nav {
   position: relative;
+
+  .tablet({
+    min-width: 436px;
+  });
 }
+
 .nav__button {
   position: absolute;
   right: 21px;
@@ -15,20 +20,25 @@
   border: none;
   display: none;
 }
+
 .nav--closed button {
   background-image: url("../img/button-burger.svg");
   display: block;
   width: 24px;
   height: 24px;
-  .tablet({display: none;});
+
+  .tablet({
+    display: none;
+  });
 }
+
 .nav--closed .nav__list {
   display: none;
 
   .tablet({
     display: flex;
     column-gap: 33px;
-});
+  });
 }
 
 .nav--opened .nav__list {
@@ -39,9 +49,19 @@
   z-index: 10;
   background: @basic-color1;
   width: 100%;
+
+  .tablet({
+    position: relative;
+    display: flex;
+    column-gap: 33px;
+    background: none;
+  });
 }
+
 .nav--opened .nav__button {
   display: block;
 
-  .tablet({display: none;});
+  .tablet({
+    display: none;
+  });
 }

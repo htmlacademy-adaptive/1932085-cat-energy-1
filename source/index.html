@@ -2,10 +2,17 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Кэт энерджи</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кэт Энерджи</title>
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="./img/favicons/favicon.svg">
+  <link rel="apple-touch-icon" href="./img/favicons/180x180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="body body--before-patch">
@@ -46,6 +53,7 @@
           </div>
         </div>
         <a href="form.html" class="hero__button button-order">Подобрать программу</a>
+      </div>
     </section>
     <section class="main-page__weight-control weight-control">
       <ul class="weight-control__list">
@@ -104,21 +112,31 @@
               </div>
             </div>
           </div>
-          <div class="exapmle__slider slider">
+          <div class="example__slider slider">
             <div class="slider__container">
               <ul class="slider__list">
                 <li class="slider__screen slider__screen--before">
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./img/slider/before@2x.png 2x">
-                    <img class="slider__image" src="./img/slider/before.png" srcset="./img/slider/before@2x.png 2x"
-                      alt="Кот меняет вес.">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/slider/before-tablet@1x.webp 1x, ./img/slider/before-tablet@2x.webp 2x">
+                    <source type="image/webp"
+                      srcset="./img/slider/before-mobile.webp 1x, ./img/slider/before-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/slider/before-tablet@1x.png 1x, ./img/slider/before-tablet@2x.png 2x">
+                    <img class="slider__image" src="./img/slider/before-mobile.png"
+                      srcset="./img/slider/before-mobile@2x.png 2x" alt="Кот меняет вес.">
                   </picture>
                 </li>
                 <li class="slider__screen slider__screen--after">
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./img/slider/after@2x.png 2x">
-                    <img class="slider__image" src="./img/slider/after.png" srcset="./img/slider/after@2x.png 2x"
-                      alt="Кот меняет вес.">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/slider/after-tablet@1x.webp 1x, ./img/slider/after-tablet@2x.webp 2x">
+                    <source type="image/webp"
+                      srcset="./img/slider/after-mobile.webp 1x, ./img/slider/after-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="./img/slider/after-tablet@1x.png 1x, ./img/slider/after-tablet@2x.png 2x">
+                    <img class="slider__image" src="./img/slider/after-mobile.png"
+                      srcset="./img/slider/after-mobile@2x.png 2x" alt="Кот меняет вес.">
                   </picture>
                 </li>
               </ul>
@@ -141,19 +159,32 @@
       <section class="footer-map">
         <h3 class="visually-hidden">Карта с локацией.</h3>
         <div class="map">
-          <div class="map__google"><iframe class="map__iframe"
+          <div class="map__google">
+            <iframe class="map__iframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198161!2d30.320472477341305!3d59.9387191620936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1706195306502!5m2!1sru!2sua"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
-          <div class="map__image"><img src="./img/location.jpg" alt="Карта с локацией."></div>
+          <div class="map__image">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="./img/location-desktop.webp 1x, ./img/location-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/location-tablet.webp 1x, ./img/location-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/location.webp 1x, ./img/location@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="./img/location-desktop.jpg 1x, ./img/location-desktop.jpg 2x">
+              <source media="(min-width: 768px)" srcset="./img/location-tablet.jpg 1x, ./img/location-tablet.jpg 2x">
+              <img class="map__image-image" src="./img/location.jpg" srcset="./img/location@2x.jpg 2x" alt="Карта с локацией.">
+            </picture>
+          </div>
         </div>
       </section>
     </div>
     <section class="footer__contacts footer-contacts">
       <h3 class="visually-hidden">Контакты.</h3>
       <a class="footer-contacts__logo-catenergy" href="index.html">
-        <svg class="footer-contacts__svg-catenergy" width="128" height="24">
+        <svg class="footer-contacts__svg-catenergy" width="128" height="24"
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1.6236 21.9574C0.489608 20.2815 -0.0733133 18.2722 0.0213584 16.2383V7.7617C-0.115966 5.70593 0.411707 3.66097 1.52346 1.94043C2.62499 0.612766 4.32737 0 6.83086 0C9.33436 0 10.9366 0.612766 11.938 1.73617C13.0252 3.15904 13.56 4.9407 13.4401 6.74043V8.78298H8.53324V6.43404C8.57287 5.73932 8.47057 5.04378 8.23282 4.39149C8.10574 4.12819 7.90433 3.90969 7.65449 3.76409C7.40465 3.61849 7.11781 3.55245 6.83086 3.57447C6.12989 3.57447 5.62919 3.77872

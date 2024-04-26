@@ -1,23 +1,15 @@
-.catalog {
-  .desktop({
-
-
-  });
-}
-
 .catalog__list {
   .list-reset();
 
   .tablet({
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     column-gap: 8.8%;
     row-gap: 47px;
     min-width: 708px;
     margin: 0 30px;
     margin-bottom: 41px;
-   });
+  });
 
   .desktop({
     grid-template-columns: repeat(4, 245px);
@@ -26,7 +18,7 @@
     margin: 0 auto;
     margin-bottom: 70px;
     width: 1220px;
-   });
+  });
 }
 
 .catalog__title {
@@ -36,32 +28,27 @@
 
   .tablet ({
     border: none;
-   padding: 0;
-   margin: 61px 30px 74px 30px;
-  });;
+    padding: 0;
+    margin: 61px 30px 74px 30px;
+  });
 
   .desktop ({
     width: 1220px;
     margin: 0 auto;
     margin-top: 74px;
     margin-bottom: 72px;
-
-  });;
-}
-.catalog__item {
-  .tablet({
-
-
   });
 }
+
 .catalog__wrapper {
   .desktop ({
     display: flex;
-width: 1220px;
-margin: 0 auto;
-margin-bottom: 89px;
-  });;
+    width: 1220px;
+    margin: 0 auto;
+    margin-bottom: 89px;
+  });
 }
+
 .catalog__inner-title {
   position: relative;
   z-index: 10;
@@ -69,9 +56,9 @@ margin-bottom: 89px;
   background-color: @basic-color1;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 27px;
+  margin-top: 22px;
   margin-bottom: 32px;
-  max-width: 50%;
+  max-width: 300px;
   text-wrap: wrap;
 
   .tablet({
@@ -79,17 +66,17 @@ margin-bottom: 89px;
     padding-right: 40px;
     margin-bottom: 72px;
   });
-  margin-top: 27px;
-  .desktop({
 
-    margin-bottom: 71px;
+  .desktop({
+    margin-bottom: 70px;
     margin-top: 6px;
     margin-left: 0;
     left: 50%;
     max-width: 610px;
-margin-left: -652px;
+    margin-left: -652px;
   });
 }
+
 .catalog__inner-title-wrapper {
   position: relative;
   width: 100%;
@@ -97,18 +84,18 @@ margin-left: -652px;
   &::before {
     position: absolute;
     content: "";
-    top: 41px;
+    top: 38px;
     background-color: @basic-color4;
     background-repeat: no-repeat;
     width: 100%;
     height: 2px;
 
     .tablet({
-     top: 50px;
+      top: 50px;
     });
 
     .desktop ({
       top: 29px;
-    });;
+    });
   }
 }
