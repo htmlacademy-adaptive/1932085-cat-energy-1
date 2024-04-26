@@ -2,11 +2,12 @@
   border-bottom: 1px solid @line-color;
   padding-bottom: 14px;
 
-  @media (min-width: @tablet-width) {
+  .tablet({
     margin: 0 70px 55px 70px;
     border-bottom: none;
-  }
+  });
 }
+
 .target__list {
   margin: 28px 20px 0 20px;
 
@@ -16,6 +17,7 @@
     margin: 0;
   });
 }
+
 .target__item:not(:last-child) {
   margin-bottom: 13px;
 

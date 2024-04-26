@@ -2,14 +2,16 @@
   width: calc(100%-40px);
   margin: 0 20px 47px 20px;
 
-  .tablet ({margin: 0 30px 47px 30px;
-  });;
-
-  .desktop({
-    width: 1220px;
-    margin: 0 auto 69px auto;
+  .tablet ({
+    margin: 0 30px 47px 30px;
   });
+
+.desktop({
+  width: 1220px;
+  margin: 0 auto 69px auto;
+});
 }
+
 .main-advantages__title {
   color: @title-dark;
   font-family: "Oswald", sans-serif;
@@ -25,10 +27,12 @@
     line-height: 60px;
     margin-bottom: 46px;
   });
-  .desktop({
-    margin-bottom: 45px;
-  });
+
+.desktop({
+  margin-bottom: 45px;
+});
 }
+
 .main-advantages__list {
   .list-reset();
 
@@ -39,15 +43,13 @@
     column-gap: 16.9%;
   });
 
-  .desktop({
-   /* display: flex;
-    flex-wrap: wrap;
-    column-gap: 100px;*/
-    grid-template-columns: repeat(4, 245px);
-    column-gap: 81px;
-    width: 1220px;
-  });
+.desktop({
+  grid-template-columns: repeat(4, 245px);
+  column-gap: 81px;
+  width: 1220px;
+});
 }
+
 .main-advantages__item {
   position: relative;
   padding-left: 80px;
@@ -59,11 +61,11 @@
     margin-bottom: 0;
   });
 
-  .desktop({
-    width: 245px;
-
-  });
+.desktop({
+  width: 245px;
+});
 }
+
 .main-advantages__item br {
   display: none;
 
@@ -75,8 +77,11 @@
 .main-advantages__item:not(:last-child) {
   margin-bottom: 20px;
 
-  .tablet({margin-bottom: 0;});
+  .tablet({
+    margin-bottom: 0;
+  });
 }
+
 .main-advantages__item--use::before {
   position: absolute;
   top: -3px;
@@ -88,10 +93,12 @@
 
   .tablet({
     top: 28px;
-     background-image: url("../img/leaf-tablet.svg");
+    background-image: url("../img/leaf-tablet.svg");
     width: 80px;
-    height: 80px;});
+    height: 80px;
+  });
 }
+
 .main-advantages__item--powder::before {
   position: absolute;
   top: -3px;
@@ -105,8 +112,10 @@
     top: 28px;
     background-image: url("../img/powder-tablet.svg");
     width: 80px;
-    height: 80px;});
+    height: 80px;
+  });
 }
+
 .main-advantages__item--food::before {
   position: absolute;
   top: -3px;
@@ -120,8 +129,10 @@
     top: 28px;
     background-image: url("../img/cuttlery-tablet.svg");
     width: 80px;
-    height: 80px;});
+    height: 80px;
+  });
 }
+
 .main-advantages__item--change::before {
   position: absolute;
   top: -3px;
@@ -135,7 +146,8 @@
     top: 28px;
     background-image: url("../img/clock-tablet.svg");
     width: 80px;
-    height: 80px;});
+    height: 80px;
+  });
 }
 
 .main-advantages__item--use {
@@ -145,6 +157,7 @@
     background-position: 65% 65%;
   });
 }
+
 .main-advantages__item--powder {
   .tablet({
     background-image: url("../../img/2-tablet.svg");
@@ -152,6 +165,7 @@
     background-position: 80% 65%;
   });
 }
+
 .main-advantages__item--food {
   .tablet({
     background-image: url("../../img/3-tablet.svg");
@@ -159,6 +173,7 @@
     background-position: 81% 74%;
   });
 }
+
 .main-advantages__item--change {
   .tablet({
     background-image: url("../../img/4-tablet.svg");

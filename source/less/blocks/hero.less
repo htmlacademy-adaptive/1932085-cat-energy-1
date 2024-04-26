@@ -4,54 +4,70 @@
 
   .tablet({
     position: relative;
-    width: 709px;
     margin: 0 auto;
     padding: 61px 0 506px 120px;
   });
 
-  .desktop({
-    width: 100%;
-    padding: 0 0 159px 0;
-    min-height: 500px;
-
-  });
+.desktop({
+  width: 100%;
+  padding: 0 0 159px 0;
+  min-height: 500px;
+});
 }
 
 .hero::before {
   .tablet({
     position: absolute;
     content: "";
-    background-image: url("../img/index-can-tablet1.png");
-    z-index: 10;
-     width: 768px;
+    background-image: image-set(url("../img/index-can-tablet.webp"),
+      url("../img/index-can-tablet.png"));
+    width: 705px;
     height: 609px;
-     bottom: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(url("../img/index-can-tablet@2x.webp"), url("../img/index-can-tablet@2x.png"));
+      width: 705px;
+      height: 609px;
+    }
+
+    z-index: 10;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
   });
 
-  .desktop({
-    background-image: url("../img/index-can-desktop.png");
-    transform: translateX(-30%);
-    width: 552px;
-    height: 499px;
-    bottom: unset;
-    top: 26px;
-  });
+.desktop({
+  background-image: image-set(url("../img/index-can-desktop.webp"), url("../img/index-can-desktop.png"));
+  transform: translateX(-30%);
+  width: 552px;
+  height: 499px;
+  bottom: unset;
+  top: 26px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(url("../img/index-can-desktop@2x.webp"), url("../img/index-can-desktop@2x.png"));
+  }
+});
 }
 
 .hero::after {
   .desktop({
-  position: absolute;
-  content: "";
-  width: 50%;
-  height: calc(100% + 36px);
-  overflow: hidden;
-  background-image: url( "../img/index-background-desktop1.jpg");
-  background-repeat: no-repeat;
-  top: -118px;
-  right: 0;
-});
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: calc(100% + 36px);
+    overflow: hidden;
+    background-image: image-set(url("../img/hero-greencat-desktop.webp"), url("../img/hero-greencat-desktop.jpg"));
+    background-repeat: no-repeat;
+    top: -118px;
+    right: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(url("../img/hero-greencat-desktop@2x.webp"), url("../img/hero-greencat-desktop@2x.jpg"));
+      width: 50%;
+      height: calc(100% + 36px);
+    }
+  });
 }
 
 .hero__block {
@@ -82,12 +98,13 @@
     width: 450px;
     margin: 0;
     text-align: start;
-  margin-bottom: 39px;});
+    margin-bottom: 39px;
+  });
 
-  .desktop({
-    position: relative;
-    margin-bottom: 41px
-         });
+.desktop({
+  position: relative;
+  margin-bottom: 41px
+});
 }
 
 .hero__descriptor {
@@ -100,18 +117,26 @@
   text-transform: uppercase;
   margin: 0;
 
-  .tablet({color: @title-dark;
+  .tablet({
+    color: @title-dark;
     font-size: 20px;
     line-height: 20px;
     text-align: start;
     max-width: 50%;
     margin-left: 0;
     margin-bottom: 50px;
-    });
+  });
 }
 
 .hero__cat-wrapper {
-  background-image: url("../img/index-background-desktop2-green.jpg");
+  background-image: image-set(url("../img/hero-greencat-mobile.webp"),
+      url("../img/hero-greencat-mobile.jpg"));
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(url("../img/hero-greencat-mobile@2x.webp"),
+        url("../img/hero-greencat-mobile@2x.jpg"));
+  }
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;
@@ -123,32 +148,37 @@
   .tablet({
     background: none;
     padding: 0;
-    min-height: auto});
+    min-height: auto
+  });
 }
+
 .hero__background-can-wrapper {
   position: relative;
   padding-bottom: 136px;
 
   .tablet({
     padding-bottom: 0;
-
   });
 
-  .desktop({
-    margin: 0;
-    padding: 0;
-
-  });
+.desktop({
+  margin: 0;
+  padding: 0;
+});
 }
+
 .hero__background-can-wrapper::after {
   position: absolute;
   content: "";
   left: 50%;
   transform: translateX(-50%);
   bottom: 5px;
-  background-image: url("../img/index-can-mobile1.png");
+  background-image: image-set(url("../img/index-can-mobile.webp"), url("../img/index-can-mobile.png"));
   width: 280px;
   height: 270px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(url("../img/index-can-mobile@2x.webp"), url("../img/index-can-mobile@2x.png"));
+  }
 
   .tablet({
     display: none;
@@ -164,5 +194,5 @@
     position: relative;
     display: inline-block;
     margin-left: 0;
- });
+  });
 }

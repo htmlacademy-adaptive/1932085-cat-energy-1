@@ -1,7 +1,12 @@
 .gift {
   position: relative;
   margin: 35px 20px;
-  background-image: url("../img/gift-mobile.jpg");
+  background-image: image-set(url("../img/gift-mobile.webp"), url("../img/gift-mobile.jpg"));
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(url("../img/gift-mobile@2x.webp"), url("../img/gift-mobile@2x.jpg"));
+  }
+
   background-color: green;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,35 +25,45 @@
   }
 
   .tablet({
-    background-image: url("../img/gift-tablet.jpg");
+    background-image: image-set(url("../img/gift-tablet.webp"), url("../img/gift-tablet.jpg"));
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(url("../img/gift-tablet@2x.webp"), url("../img/gift-tablet@2x.jpg"));
+    }
+
     background-color: @basic-color4;
     display: block;
     min-height: 200px;
     margin: 70px 30px 75px 30px;
 
-    &::before  {
+    &::before {
       top: 49%;
       transform: translateY(-50%);
       background-image: url("../img/icon-gift-tablet.svg");
       left: 11%;
       content: "";
       width: 80px;
-    height: 83px;
-    background-repeat: no-repeat;
+      height: 83px;
+      background-repeat: no-repeat;
     }
   });
 
-  .desktop({
-    background-image: url("../img/gift-desktop.jpg");
-    background-color: green;
-    width: 245px;
-    margin: 0;
+.desktop({
+  background-image: image-set(url("../img/gift-desktop.webp"), url("../img/gift-desktop.jpg"));
+  background-color: green;
 
-    &::before  {
-      top: 96px;
-      left: 34%;
-    }
-  });
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(url("../img/gift-desktop@2x.webp"), url("../img/gift-desktop@2x.jpg"));
+  }
+
+  width: 245px;
+  margin: 0;
+
+  &::before {
+    top: 96px;
+    left: 34%;
+  }
+});
 }
 
 .gift__descripton {
@@ -72,12 +87,12 @@
     text-align: left;
   });
 
-  .desktop ({
-    margin: 0 auto;
-    width: 162px;
-    text-align: center;
-    bottom: 0;
-    padding-bottom: 43px;
-    padding-top: 184px;
-  });
+.desktop ({
+  margin: 0 auto;
+  width: 162px;
+  text-align: center;
+  bottom: 0;
+  padding-bottom: 43px;
+  padding-top: 184px;
+});
 }
