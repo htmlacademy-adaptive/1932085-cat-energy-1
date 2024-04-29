@@ -21,14 +21,18 @@
 }
 
 .nav-list__item {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 22px;
+  padding-bottom: 23px;
   text-align: center;
   border-top: 1px solid;
   border-color: #e6e6e6;
 
   .tablet({
     border: none; padding-bottom: 7px;
+  });
+
+  .desktop({
+    padding-top: 24px;
   });
 }
 
@@ -51,5 +55,6 @@
 .nav-list__item--white {
   .desktop({
     border-bottom: 2px solid @basic-color1;
+    padding-bottom: 10px;
   });
 }
