@@ -1,6 +1,6 @@
 .target {
   border-bottom: 1px solid @line-color;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 
   .tablet({
     margin: 0 70px 55px 70px;
@@ -16,6 +16,10 @@
     border: 1px solid #e7e7e7;
     margin: 0;
   });
+
+  .desktop({
+    padding-top: 30px;
+  });
 }
 
 .target__item:not(:last-child) {
@@ -23,5 +27,9 @@
 
   .tablet({
     margin-bottom: 12px;
+  });
+
+  .desktop({
+    margin-bottom: 13px;
   });
 }
